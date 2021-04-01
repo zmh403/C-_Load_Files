@@ -128,7 +128,7 @@ void JTAG_reg::start_shift(){
 	jtag_goto_SHIFT_DR();
 }
 
-void JTAG_reg::shift_nbits(unsigned int numbits, unsigned int datain[256], unsigned int dataout[256]){
+void JTAG_reg::shift_nbits(unsigned int numbits, unsigned int* datain, unsigned int* dataout){
 	cout<<"shift_nbits "<<numbits<<" DATAIN: ";
 	for(int i=numbits-1; i>=0; i--){
 		cout << datain[i];
@@ -253,7 +253,7 @@ void adv_dbg_if_t::axi_write(unsigned int write_size, unsigned int* addr, unsign
 		cout<<addr[i];
 	cout<<" for "<< nwords*4 <<" bytes."<<endl;
 }
-
+/*
 int main(){
 	unsigned int addr[32] = {0};
 	unsigned int data[256] = {0};
@@ -277,4 +277,4 @@ int main(){
 	adv_dbg_if.axi4_write32(addr, 1, data);
 
 	return 0;
-}
+}*/

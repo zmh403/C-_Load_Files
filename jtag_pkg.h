@@ -2,7 +2,6 @@
 #define JTAG_PKG
 #endif
 
-//#include
 using namespace std;
 
 const int JTAG_CLUSTER_INSTR_WIDTH = 4;
@@ -15,7 +14,7 @@ const int JTAG_CLUSTER_BYPASS = 15;
 const int JTAG_INSTR_WIDTH = JTAG_CLUSTER_INSTR_WIDTH;
 
 class JTAG_reg{
-	//The I/O in the design
+	//The I/Os in the design
 	bool tck;
 	bool trstn;
 	bool tms;

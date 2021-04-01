@@ -117,11 +117,6 @@ void JTAG_reg::shift_nbits_noex(unsigned int numbits, unsigned int* datain, unsi
 		jtag_clock(1);
 		dataout[i] = tdo;
 	}
-	cout<<"shift_nbits_noex: "<<numbits<<" DATAIN: ";
-	for(int i=numbits-1; i>=0; i--){
-		cout << datain[i];
-	}
-		cout<<endl;
 }
 
 void JTAG_reg::start_shift(){
@@ -129,11 +124,6 @@ void JTAG_reg::start_shift(){
 }
 
 void JTAG_reg::shift_nbits(unsigned int numbits, unsigned int* datain, unsigned int* dataout){
-	cout<<"shift_nbits "<<numbits<<" DATAIN: ";
-	for(int i=numbits-1; i>=0; i--){
-		cout << datain[i];
-	}
-	cout<<endl;
 	jtag_shift_NBITS_SHIFT_DR(numbits,datain,dataout);
 }
 

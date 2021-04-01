@@ -1,5 +1,5 @@
 #include "spi_pkg.cpp"
-#include "jtag.cpp"
+#include "jtag_pkg.cpp"
 using namespace std;
 #define SPI "QUAD"
 #define memload "SPI"
@@ -19,11 +19,14 @@ int main(){
 	JTAG_reg dbg_reg(0,0,0,0,0);
 	adv_dbg_if_t adv_dbg_if(dbg_reg);
 
+	SPI_pkg spi_en(0,0,0,0,0);
+
+
 	dbg_reg.Delay(500);
 	s_rst_n = 1;
 	dbg_reg.Delay(500);
 	if (use_qspi)
-		spi_enable_qpi();
+		spi_en.spi_enable_qpi();
  
 	if(memload != "STANDALONE"){
 		adv_dbg_if.jtag_reset();
@@ -39,8 +42,8 @@ int main(){
 	}
 
 	if (memload == "SPI"){
-		spi_load(use_qspi);
-		spi_check(use_qspi);
+		spi_en.spi_load(use_qspi);
+		//spi_en.spi_check(use_qspi);
 	}
 	
 	dbg_reg.Delay(200);

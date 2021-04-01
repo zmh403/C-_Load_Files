@@ -1,22 +1,7 @@
-#include <iostream>
-#include <fstream>
-#include <climits>
-#include <ctime>
 #include "spi_pkg.h"
 
 //Constructor
-SPI_pkg::SPI_pkg(bool csn,int instr_line,char* addr_buffer,char* data_buffer,int* addr,int* data,int* data_recv,int padmode,int addr_old){
-//	file_line = instr_line;
-//	for (int i=0;i<10000;i++){
-//		spi_addr_buffer[i] = addr_buffer[i];
-//		spi_data_buffer[i] = data_buffer[i];
-//		spi_addr[i] = addr[i];
-//		spi_data[i] = data[i];
-//		spi_data_recv[i] = data_recv[i];
-//	}
-//	padmode_spi_master = padmode;
-//	spi_addr_old = addr_old;
-}
+SPI_pkg::SPI_pkg(bool csn,unsigned long int* addr,unsigned long int* data,int* data_recv,int padmode){}
 
 void SPI_pkg::Delay(int time){
 //time = 1 ---> delay 1 ns
@@ -25,7 +10,9 @@ clock_t now = clock();
 while(clock()-now < time);
 }
 
-int SPI_pkg::Load_file(){//(char* spi_addr_buffer,char* spi_data_buffer){
+int SPI_pkg::Load_file(unsigned long int* spi_addr,unsigned long int* spi_data){
+	char addr_buffer[10000][10];
+	char data_buffer[10000][10];
 	int temp_line = 0;
 	// Read the file
 	ifstream ifs;
@@ -33,82 +20,60 @@ int SPI_pkg::Load_file(){//(char* spi_addr_buffer,char* spi_data_buffer){
 
 	ifs.open("spi_stim.txt");
     if(!ifs.is_open()) {
-        cout << "Failed to open file.\n";
+        cout<<"Failed to open file.\n";
+		return -1;
     }else{
 		while (!ifs.eof()) {
 			ifs.getline(buffer,sizeof(buffer));
 			for(int i=0;i<8;i++){
-				spi_addr_buffer[temp_line][i] = buffer[i];
-				spi_data_buffer[temp_line][i] = buffer[i+9];
+				addr_buffer[temp_line][i] = buffer[i];
+				data_buffer[temp_line][i] = buffer[i+9];
 			}
 			temp_line++;
 		}
-		temp_line--; // The eof would enable after last line, so temp_line should subtract 1.
 		ifs.close();
+		//file_line:1000 ---> temp_line:1001 not 1000
+		temp_line--;
+		// Convert the bits of data from hex to decimal in interger type.
+		for (int i=0;i<temp_line;i++){
+			spi_addr[i] = Sum_of_hex(addr_buffer[i]);
+			spi_data[i] = Sum_of_hex(data_buffer[i]);
+		}
     }
 	return temp_line;
 }
 
 // Convert_8-bit_Hex_char to int
-int SPI_pkg::Sum_of_hex(char* buffer){
-	unsigned long int sum;
-	sum = 0;
+unsigned long int SPI_pkg::Sum_of_hex(char* buffer){
+	unsigned long int sum = 0;
 	for (int i=0;i<8;i++){
-		if(buffer[i] == '0'){
-			sum += 0;
-		}else if (buffer[i] == '1'){
-			sum += (16^(7-i));
-		}else if (buffer[i] == '2'){
-			sum += (16^(7-i))*2;
-		}else if (buffer[i] == '3'){
-			sum += (16^(7-i))*3;
-		}else if (buffer[i] == '4'){
-			sum += (16^(7-i))*4;
-		}else if (buffer[i] == '5'){
-			sum += (16^(7-i))*5;
-		}else if (buffer[i] == '6'){
-			sum += (16^(7-i))*6;
-		}else if (buffer[i] == '7'){
-			sum += (16^(7-i))*7;
-		}else if (buffer[i] == '8'){
-			sum += (16^(7-i))*8;
-		}else if (buffer[i] == '9'){
-			sum += (16^(7-i))*9;
-		}else if (buffer[i] == 'A'){
-			sum += (16^(7-i))*10;
-		}else if (buffer[i] == 'B'){
-			sum += (16^(7-i))*11;
-		}else if (buffer[i] == 'C'){
-			sum += (16^(7-i))*12;
-		}else if (buffer[i] == 'D'){
-			sum += (16^(7-i))*13;
-		}else if (buffer[i] == 'E'){
-			sum += (16^(7-i))*14;
-		}else if (buffer[i] == 'F'){
-			sum += (16^(7-i))*15;
-		}else {
-			/* Unknown */
-			return -1;
+		switch (buffer[i]){
+			case '0':sum += 0; break;
+			case '1':sum += pow(16,(7-i)); break;
+			case '2':sum += pow(16,(7-i))*2; break;
+			case '3':sum += pow(16,(7-i))*3; break;
+			case '4':sum += pow(16,(7-i))*4; break;
+			case '5':sum += pow(16,(7-i))*5; break;
+			case '6':sum += pow(16,(7-i))*6; break;
+			case '7':sum += pow(16,(7-i))*7; break;
+			case '8':sum += pow(16,(7-i))*8; break;
+			case '9':sum += pow(16,(7-i))*9; break;
+			case 'A':sum += pow(16,(7-i))*10; break;
+			case 'B':sum += pow(16,(7-i))*11; break;
+			case 'C':sum += pow(16,(7-i))*12; break;
+			case 'D':sum += pow(16,(7-i))*13; break;
+			case 'E':sum += pow(16,(7-i))*14; break;
+			case 'F':sum += pow(16,(7-i))*15; break;
+			default:cout<<"Failed, SUM: "<<sum<<endl; break;
 		}
 	}	
 	return sum;
-}
-
-void SPI_pkg::Load_file_to_int(){
-	file_line = Load_file();
-
-	//Convert the addr/data from char to int.
-	for (int i=0;i<file_line;i++){
-		spi_addr[i] = Sum_of_hex(spi_addr_buffer[i]);
-		spi_data[i] = Sum_of_hex(spi_data_buffer[i]);
-	}
 }
 
 //-----------------------------------testbench task--------------------------------------------------
 
 void SPI_pkg::spi_send_cmd_addr(bool use_qspi,int command,unsigned long int addr){
 	if (use_qspi){
-		cout<<"send_addr_1"<<endl;
 		// Impl:Transfer command(scalar 8-bit) to hardware
 		//Then, the bits of command are assigned to "spi_sdi" in the design per cycle.
 		/*
@@ -122,7 +87,6 @@ void SPI_pkg::spi_send_cmd_addr(bool use_qspi,int command,unsigned long int addr
 		}*/
 
 	}else{
-		cout<<"send_addr_0"<<endl;
 		/*
 		for (int i = 7; i >= 0; i--){
 	  		spi_sdo0 = command[i];
@@ -157,7 +121,6 @@ void SPI_pkg::spi_send_cmd_addr(bool use_qspi,int command,unsigned long int addr
 
 void SPI_pkg::spi_send_data(bool use_qspi, unsigned long int data){
 	if (use_qspi){
-		cout<<"send_data_1"<<endl;
 		// Impl:Transfer data(axi4 32-bit) to hardware.
 		//Then, the bits of data are assigned to "spi_sdi" in the design per cycle.
 		/*
@@ -170,7 +133,6 @@ void SPI_pkg::spi_send_data(bool use_qspi, unsigned long int data){
 			#`SPI_SEMIPERIOD spi_sck = 0;
 		}*/
 	}else{
-		cout<<"send_data_0"<<endl;
 		/*
 		for (int i = 31; i >= 0; i--){
 			spi_sdo0 = data[i];
@@ -182,7 +144,6 @@ void SPI_pkg::spi_send_data(bool use_qspi, unsigned long int data){
 
 void SPI_pkg::spi_recv_data(bool use_qspi, unsigned long int data){
 	if (use_qspi){
-		cout<<"recv_data_1"<<endl;
 		// Impl:Transfer data(axi4 32-bit) from hardware to host.
 		//Then, the bit of "spi_sdo" are assigned to the data per cycle.
 		/*
@@ -195,7 +156,6 @@ void SPI_pkg::spi_recv_data(bool use_qspi, unsigned long int data){
 			#`SPI_SEMIPERIOD spi_sck = 0;
 		}*/
 	}else{
-		cout<<"recv_data_0"<<endl;
 		/*
 		for (int i = 31; i >= 0; i--){
 			data[i] = spi_sdi0;
@@ -206,7 +166,9 @@ void SPI_pkg::spi_recv_data(bool use_qspi, unsigned long int data){
 }
 
 void SPI_pkg::spi_load (bool use_qspi){
-	Load_file_to_int();
+	int instr_line = 0;
+	int spi_addr_old = 0;
+	instr_line = Load_file(spi_addr,spi_data);
 	cout<<"[SPI] Loading Instruction RAM"<<endl;
 	
 	Delay(100);
@@ -215,9 +177,9 @@ void SPI_pkg::spi_load (bool use_qspi){
 
 	spi_addr_old = spi_addr[0] - 4;
 	
-	for (int i=0;i<file_line;i++){
+	for (int i=0;i<instr_line;i++){
 		if (spi_addr[i] != (spi_addr_old + 4)){
-			cout<<"[SPI] Prev address"<< spi_addr_old <<" current addr "<< spi_addr[i] << endl;
+			cout<<"[SPI] Prev address "<< spi_addr_old <<" current addr "<< spi_addr[i] << endl;
 			cout<<"[SPI] Loading Data RAM"<<endl;
 			Delay(100);
 			spi_csn  = 1;
@@ -234,7 +196,9 @@ void SPI_pkg::spi_load (bool use_qspi){
 }
 
 void SPI_pkg::spi_check(bool use_qspi){
-	Load_file_to_int();
+	int instr_line = 0;
+	int spi_addr_old = 0;
+	instr_line = Load_file(spi_addr,spi_data);
 	cout<<"[SPI] Loading Instruction RAM"<<endl;
 	bool spi_csn = 0;
 	bool spi_sck = 0;
@@ -251,7 +215,7 @@ void SPI_pkg::spi_check(bool use_qspi){
 		Delay(50); 
 		spi_sck = 0;
 	}
-	for(int i = 0;i<file_line;i++){                        // loop until we have no more stimuli)
+	for(int i = 0;i<instr_line;i++){                        // loop until we have no more stimuli)
         if(spi_addr[i] != (spi_addr_old + 4)){
 			cout<<"[SPI] Prev address"<< spi_addr_old <<" current addr "<< spi_addr <<endl;
 			cout<<"[SPI] Checking Data RAM"<<endl;
@@ -292,7 +256,6 @@ void SPI_pkg::spi_write_reg(bool use_qspi,int command,int reg_val){
 	spi_csn = 0;
 	Delay(100);
 	if(use_qspi){
-		cout<<"write_cmd_1"<<endl;
 		// Impl:Transfer command(scalar 8-bit) to hardware
 		//Then, the bits of command are assigned to "spi_sdi" in the design per cycle.
 		/*
@@ -305,7 +268,6 @@ void SPI_pkg::spi_write_reg(bool use_qspi,int command,int reg_val){
 			#`SPI_SEMIPERIOD spi_sck = 0;
 		}*/
 	}else{
-		cout<<"write_cmd_0"<<endl;
 		/*
 		for(int i=7; i>= 0; i--){
 			spi_sdo0 = command[i];
@@ -314,7 +276,6 @@ void SPI_pkg::spi_write_reg(bool use_qspi,int command,int reg_val){
 		}*/
 	}
 	if(use_qspi){
-		cout<<"write_reg_1"<<endl;
 		// Impl:Transfer reg_val(scalar 8-bit) to hardware
 		//Then, the bits of reg_val are assigned to "spi_sdi" in the design per cycle.
 		/*
@@ -327,7 +288,6 @@ void SPI_pkg::spi_write_reg(bool use_qspi,int command,int reg_val){
 			#`SPI_SEMIPERIOD spi_sck = 0;
 		}*/
 	}else{
-		cout<<"write_reg_0"<<endl;
 		/*
 		for(int i=7;i>= 0;i--){
 			spi_sdo0 = reg_val[i];
@@ -351,15 +311,16 @@ void SPI_pkg::spi_enable_qpi(){
 
 }
 */
-
+/*
 int main(){
 	bool use_qspi = 1;
-	SPI_pkg spi_en(0,0,0,0,0,0,0,0,0);
+	SPI_pkg spi_en(0,0,0,0,0);
 	spi_en.spi_enable_qpi();
 	spi_en.spi_load(use_qspi);
-//	spi_en.spi_check(use_qspi);
+	spi_en.spi_check(use_qspi);
 
 
 
 	return 0;
 }
+*/

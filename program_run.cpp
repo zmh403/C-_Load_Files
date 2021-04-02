@@ -21,7 +21,6 @@ int main(){
 
 	SPI_pkg spi_en(0,0,0,0,0);
 
-
 	dbg_reg.Delay(500);
 	s_rst_n = 1;
 	dbg_reg.Delay(500);
@@ -43,7 +42,6 @@ int main(){
 
 	if (memload == "SPI"){
 		spi_en.spi_load(use_qspi);
-		//spi_en.spi_check(use_qspi);
 	}
 	
 	dbg_reg.Delay(200);

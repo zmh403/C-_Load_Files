@@ -14,14 +14,13 @@ const int JTAG_CLUSTER_BYPASS = 15;
 const int JTAG_INSTR_WIDTH = JTAG_CLUSTER_INSTR_WIDTH;
 
 class JTAG_reg{
-	//The I/Os in the design
+public:
 	bool tck;
 	bool trstn;
 	bool tms;
 	bool tdi;
 	bool tdo;
 
-public:
 	JTAG_reg(bool tck_i, bool trstn_i, bool tms_i, bool tdi_i, bool tdo_o);
 	void jtag_softreset();
 	void jtag_reset();

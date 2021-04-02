@@ -15,13 +15,13 @@ const int SPI_QUAD_TX = 1;
 const int SPI_QUAD_RX = 2;
 
 class SPI_pkg{
+public:
 	bool spi_csn;
-
 	unsigned long int spi_addr[10000];
 	unsigned long int spi_data[10000];
 	int spi_data_recv[10000];
 	int padmode_spi_master;
-public:
+
 	SPI_pkg(bool csn,unsigned long int* addr,unsigned long int* data,int* data_recv,int padmode);
 	void Delay(int time);
 	int Load_file (unsigned long int* spi_addr,unsigned long int* spi_data);

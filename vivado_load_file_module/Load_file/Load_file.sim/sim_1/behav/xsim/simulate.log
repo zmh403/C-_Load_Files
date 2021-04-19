@@ -1,0 +1,1218 @@
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+Current STATE: xxxx
+JTAG_DONE:0 
+RB_START=0
+Fetch_EN:x 
+                   0 CLK=1 RST_N=1  SPI_sdo0=x SPI_sdo1=x SPI_sdo2=x SPI_sdo3=x
+Data=xxxxxxxx
+                   1 CLK=1 RST_N=0  SPI_sdo0=x SPI_sdo1=x SPI_sdo2=x SPI_sdo3=x
+                   5 CLK=0 RST_N=0  SPI_sdo0=x SPI_sdo1=x SPI_sdo2=x SPI_sdo3=x
+                  10 CLK=1 RST_N=0  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Fetch_EN:0 
+                  15 CLK=0 RST_N=0  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                  20 CLK=1 RST_N=0  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                  21 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                  25 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0001
+                  30 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                  35 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0010
+                  40 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                  45 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0010
+                  50 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                  55 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0010
+                  60 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                  65 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0010
+                  70 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                  75 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0010
+                  80 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                  85 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0010
+                  90 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                  95 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0010
+                 100 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 105 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0010
+                 110 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 115 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0010
+                 120 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 125 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0010
+                 130 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 135 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0010
+                 140 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 145 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0010
+                 150 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 155 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0010
+                 160 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 165 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0010
+                 170 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 175 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0010
+                 180 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 185 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0010
+                 190 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 195 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0010
+                 200 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+=======Start jtag=======
+                 205 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0010
+                 210 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 215 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 220 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 225 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 230 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 235 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 240 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 245 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 250 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 255 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 260 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 265 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 270 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 275 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 280 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 285 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 290 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 295 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 300 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 305 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 310 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 315 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 320 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 325 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 330 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 335 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 340 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 345 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 350 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 355 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 360 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 365 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 370 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 375 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 380 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 385 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 390 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 395 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 400 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 405 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 410 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 415 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 420 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 425 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 430 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 435 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 440 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 445 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 450 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 455 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 460 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 465 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 470 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 475 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 480 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 485 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 490 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 495 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 500 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 505 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 510 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 515 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 520 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 525 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 530 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 535 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 540 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 545 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 550 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 555 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 560 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 565 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 570 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 575 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 580 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 585 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 590 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 595 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 600 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 605 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 610 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 615 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 620 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 625 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 630 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 635 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 640 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 645 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 650 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 655 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 660 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 665 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 670 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 675 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 680 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 685 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 690 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 695 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 700 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 705 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 710 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 715 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 720 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 725 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 730 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 735 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 740 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 745 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 750 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 755 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 760 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 765 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 770 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 775 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 780 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 785 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 790 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 795 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 800 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 805 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 810 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 815 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 820 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 825 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 830 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 835 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 840 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 845 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 850 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 855 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 860 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 865 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 870 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 875 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 880 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 885 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 890 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 895 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 900 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 905 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 910 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 915 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 920 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 925 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 930 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 935 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 940 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 945 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 950 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 955 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 960 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 965 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 970 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 975 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 980 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 985 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                 990 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                 995 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1000 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1005 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1010 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1015 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1020 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1025 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1030 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1035 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1040 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1045 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1050 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1055 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1060 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1065 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1070 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1075 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1080 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1085 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1090 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1095 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1100 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1105 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1110 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1115 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1120 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1125 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1130 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1135 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1140 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1145 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1150 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1155 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1160 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1165 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1170 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1175 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1180 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1185 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1190 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1195 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1200 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1205 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1210 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1215 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1220 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1225 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1230 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1235 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1240 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1245 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1250 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1255 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1260 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1265 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1270 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1275 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1280 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1285 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1290 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1295 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1300 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1305 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1310 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1315 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1320 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1325 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1330 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1335 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1340 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1345 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1350 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1355 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1360 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1365 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1370 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1375 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1380 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1385 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1390 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1395 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1400 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1405 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1410 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1415 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1420 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1425 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1430 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1435 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1440 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1445 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1450 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1455 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1460 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1465 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1470 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1475 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1480 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1485 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1490 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1495 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1500 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1505 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1510 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1515 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1520 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1525 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1530 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1535 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1540 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1545 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1550 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1555 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1560 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1565 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1570 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1575 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1580 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1585 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1590 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1595 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1600 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1605 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1610 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1615 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1620 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1625 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1630 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1635 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1640 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1645 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1650 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1655 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1660 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1665 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1670 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1675 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1680 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1685 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1690 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1695 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1700 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1705 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1710 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1715 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1720 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1725 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1730 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1735 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1740 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1745 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1750 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1755 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1760 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1765 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1770 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1775 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1780 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1785 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1790 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1795 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1800 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+JTAG_DONE:1 
+=======jtag done=======
+                1805 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0011
+                1810 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1815 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0100
+                1820 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1825 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0100
+                1830 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=1 SPI_sdo2=0 SPI_sdo3=0
+                1835 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=1 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0100
+                1840 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1845 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0100
+                1850 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1855 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0100
+                1860 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1865 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0100
+                1870 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1875 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0100
+                1880 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1885 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0100
+                1890 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1895 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0100
+                1900 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1905 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0100
+                1910 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+RB_START=1
+=======Start spi_load=======
+Data=f0000013
+                1915 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0100
+                1920 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+RB_START=0
+=======Access Done. Data index:          0 =======
+                1925 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                1930 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+RB_START=1
+                1935 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                1940 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1945 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                1950 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1955 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                1960 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1965 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                1970 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1975 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                1980 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                1985 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                1990 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=1 SPI_sdo2=0 SPI_sdo3=0
+Data=5000001a
+                1995 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=1 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2000 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=1 SPI_sdo3=0
+=======Access Done. Data index:          1 =======
+                2005 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=1 SPI_sdo3=0
+Current STATE: 0101
+                2010 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2015 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2020 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2025 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2030 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2035 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2040 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2045 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2050 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2055 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2060 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2065 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2070 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=1 SPI_sdo2=0 SPI_sdo3=1
+Data=20000020
+                2075 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=1 SPI_sdo2=0 SPI_sdo3=1
+Current STATE: 0101
+                2080 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=1 SPI_sdo2=0 SPI_sdo3=0
+=======Access Done. Data index:          2 =======
+                2085 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=1 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2090 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2095 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2100 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2105 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2110 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2115 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2120 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2125 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2130 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2135 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2140 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=1 SPI_sdo2=0 SPI_sdo3=0
+                2145 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=1 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2150 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Data=30000031
+                2155 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2160 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=1 SPI_sdo2=0 SPI_sdo3=0
+=======Access Done. Data index:          3 =======
+                2165 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=1 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2170 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2175 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2180 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2185 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2190 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2195 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2200 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2205 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2210 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2215 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2220 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=1 SPI_sdo2=0 SPI_sdo3=0
+                2225 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=1 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2230 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Data=40000045
+                2235 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2240 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=1 SPI_sdo3=0
+=======Access Done. Data index:          4 =======
+                2245 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=1 SPI_sdo3=0
+Current STATE: 0101
+                2250 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2255 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2260 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2265 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2270 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2275 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2280 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2285 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2290 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2295 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2300 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=1 SPI_sdo3=0
+                2305 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=1 SPI_sdo3=0
+Current STATE: 0101
+                2310 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=1 SPI_sdo3=0
+Data=50000050
+                2315 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=1 SPI_sdo3=0
+Current STATE: 0101
+                2320 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=1 SPI_sdo3=0
+=======Access Done. Data index:          5 =======
+                2325 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=1 SPI_sdo3=0
+Current STATE: 0101
+                2330 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2335 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2340 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2345 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2350 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2355 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2360 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2365 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2370 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2375 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2380 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=1 SPI_sdo3=0
+                2385 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=1 SPI_sdo3=0
+Current STATE: 0101
+                2390 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Data=6000006b
+                2395 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2400 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=1 SPI_sdo2=1 SPI_sdo3=0
+=======Access Done. Data index:          6 =======
+                2405 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=1 SPI_sdo2=1 SPI_sdo3=0
+Current STATE: 0101
+                2410 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2415 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2420 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2425 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2430 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2435 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2440 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2445 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2450 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2455 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2460 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=1 SPI_sdo2=1 SPI_sdo3=0
+                2465 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=1 SPI_sdo2=1 SPI_sdo3=0
+Current STATE: 0101
+                2470 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=1 SPI_sdo2=0 SPI_sdo3=1
+Data=70000073
+                2475 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=1 SPI_sdo2=0 SPI_sdo3=1
+Current STATE: 0101
+                2480 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=1 SPI_sdo2=1 SPI_sdo3=0
+=======Access Done. Data index:          7 =======
+                2485 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=1 SPI_sdo2=1 SPI_sdo3=0
+Current STATE: 0101
+                2490 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2495 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2500 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2505 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2510 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2515 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2520 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2525 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2530 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2535 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2540 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=1 SPI_sdo2=1 SPI_sdo3=0
+                2545 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=1 SPI_sdo2=1 SPI_sdo3=0
+Current STATE: 0101
+                2550 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=1 SPI_sdo2=0 SPI_sdo3=0
+Data=80000080
+                2555 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=1 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2560 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=1
+=======Access Done. Data index:          8 =======
+                2565 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=1
+Current STATE: 0101
+                2570 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2575 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2580 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2585 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2590 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2595 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2600 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2605 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2610 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2615 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2620 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=1
+                2625 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=1
+Current STATE: 0101
+                2630 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Data=90000090
+                2635 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2640 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=1
+=======Access Done. Data index:          9 =======
+                2645 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=1
+Current STATE: 0101
+                2650 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2655 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2660 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2665 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2670 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2675 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2680 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2685 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2690 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2695 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2700 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=1
+                2705 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=1
+Current STATE: 0101
+                2710 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Data=a00000a7
+                2715 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2720 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+=======Access Done. Data index:         10 =======
+                2725 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0110
+                2730 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Data=b00000ba
+                2735 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0110
+                2740 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+=======Access Done. Data index:         11 =======
+Data=c00000c0
+                2745 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0110
+                2750 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+=======Access Done. Data index:         12 =======
+Data=d00000d2
+                2755 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0111
+                2760 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+=======Access Done. Data index:         13 =======
+Data=e00000e1
+                2765 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0111
+                2770 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=1 SPI_sdo2=0 SPI_sdo3=0
+=======Access Done. Data index:         14 =======
+Data=f00000f3
+                2775 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=1 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0111
+                2780 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+=======Access Done. Data index:         15 =======
+                2785 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0111
+                2790 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2795 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0111
+                2800 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=1 SPI_sdo2=0 SPI_sdo3=0
+                2805 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=1 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0111
+                2810 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2815 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0111
+                2820 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2825 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0111
+                2830 CLK=1 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2835 CLK=0 RST_N=1  SPI_sdo0=1 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0111
+                2840 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2845 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0111
+                2850 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2855 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0111
+                2860 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2865 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0111
+                2870 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2875 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0111
+                2880 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2885 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0111
+                2890 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2895 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2900 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2905 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2910 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2915 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2920 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2925 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2930 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2935 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2940 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2945 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2950 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2955 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2960 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2965 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2970 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2975 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2980 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2985 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                2990 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                2995 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3000 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3005 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3010 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3015 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3020 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3025 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3030 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3035 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3040 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3045 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3050 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3055 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3060 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3065 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3070 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3075 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3080 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3085 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3090 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3095 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3100 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3105 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3110 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3115 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3120 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3125 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3130 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3135 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3140 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3145 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3150 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3155 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3160 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3165 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3170 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3175 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3180 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3185 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3190 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3195 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3200 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3205 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3210 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3215 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3220 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3225 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3230 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3235 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3240 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3245 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3250 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3255 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3260 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3265 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3270 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3275 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3280 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3285 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3290 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3295 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3300 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3305 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3310 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3315 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3320 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3325 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3330 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3335 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3340 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3345 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3350 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3355 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3360 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3365 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3370 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3375 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3380 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3385 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3390 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3395 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3400 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3405 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3410 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3415 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3420 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3425 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3430 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3435 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3440 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3445 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3450 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3455 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3460 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3465 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3470 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3475 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3480 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3485 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3490 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3495 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3500 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3505 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3510 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3515 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3520 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3525 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3530 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3535 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3540 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3545 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3550 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3555 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3560 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3565 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3570 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3575 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3580 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3585 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3590 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3595 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3600 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3605 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3610 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3615 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3620 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3625 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3630 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3635 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3640 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3645 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3650 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3655 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3660 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3665 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3670 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3675 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3680 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3685 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3690 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3695 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3700 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3705 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3710 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3715 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3720 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3725 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3730 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3735 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3740 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3745 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3750 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3755 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3760 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3765 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3770 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3775 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3780 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3785 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3790 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3795 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3800 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3805 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3810 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3815 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3820 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3825 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3830 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3835 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3840 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3845 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3850 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3855 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3860 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3865 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3870 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3875 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3880 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3885 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3890 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+                3895 CLK=0 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0
+Current STATE: 0101
+                3900 CLK=1 RST_N=1  SPI_sdo0=0 SPI_sdo1=0 SPI_sdo2=0 SPI_sdo3=0

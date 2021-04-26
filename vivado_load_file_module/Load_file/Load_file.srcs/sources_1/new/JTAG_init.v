@@ -5,7 +5,7 @@
 // 
 // Create Date: 04/06/2021 02:00:59 PM
 // Design Name: 
-// Module Name: Load_data
+// Module Name: JTAG_init
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 

@@ -81,6 +81,7 @@ module SPI_load_file(
     reg spi_sdo2;
     reg spi_sdo3;
     reg spi_csn;
+    reg sck, sck_zero;
     reg fetch_enable;
     // Use in spi_enable_qpi()
     reg [7:0] command; 
@@ -110,8 +111,17 @@ module SPI_load_file(
     assign spi_sdo2_o = spi_sdo2;
     assign spi_sdo3_o = spi_sdo3;
     assign spi_csn_o = spi_csn;
-    assign spi_sck_o = clk;
+    assign spi_sck_o = sck;
     assign fetch_enable_o = fetch_enable;
+    
+    // Control spi_sck
+    always @(*) begin
+        if (sck_zero) begin
+            sck = 1'b0;
+        end else begin
+            sck = clk;
+        end
+    end
     
     always @(posedge clk, negedge rst_n) begin
         if (!rst_n) begin
@@ -119,8 +129,8 @@ module SPI_load_file(
             k<=0;
         end else begin
             i<=i+1;
-            $monitor($time, " CLK=%b RST_N=%b  SPI_sdo0=%b SPI_sdo1=%b SPI_sdo2=%b SPI_sdo3=%b",clk, rst_n, spi_sdo0, spi_sdo1, spi_sdo2, spi_sdo3);
-            $monitor("Data=%h",spi_data);
+            //$monitor($time, " CLK=%b RST_N=%b  SPI_sdo0=%b SPI_sdo1=%b SPI_sdo2=%b SPI_sdo3=%b",clk, rst_n, spi_sdo0, spi_sdo1, spi_sdo2, spi_sdo3);
+            //$monitor("Data=%h",spi_data);
         end
     end
     
@@ -130,7 +140,7 @@ module SPI_load_file(
             PRES_STATE <= INIT;
         end else begin
             PRES_STATE <= NEXT_STATE;
-            $display("Current STATE: %b", PRES_STATE);
+            //$display("Current STATE: %b", PRES_STATE);
             //$display("PRES_STATE: %b, TDI: %b, INDEX: %d", PRES_STATE, tdi, i);
         end
     end
@@ -138,10 +148,6 @@ module SPI_load_file(
     // Control path combinational circuit.
     always @(*) begin
         NEXT_STATE = INIT;
-        //Control Read buffer
-        //RB_start = 1'b0;
-        //data_ready = 1'b0;
-
 
         case (PRES_STATE)
         INIT:begin
@@ -173,13 +179,12 @@ module SPI_load_file(
             end
         end
         SPI_LOAD_ADDR_0:begin
-            i=0;
+            //i=0;
             if(L_addr_done) begin
                 NEXT_STATE = SPI_LOAD_DATA;
-                //data_ready = 1'b1;
             end else begin
                 NEXT_STATE = SPI_LOAD_ADDR_0;
-
+                i=0;
             end
         end
         SPI_LOAD_DATA:begin
@@ -189,13 +194,12 @@ module SPI_load_file(
             end else if(k==spi_addr_idx) begin
                 NEXT_STATE = RESET_CSN;
             //Finish transfer previous data
-            end else if(L_data_done) begin
+            //end else if(L_data_done) begin
                 //$display("Reload data");
-                //data_ready = 1'b1;
-                i=0;
-            end //else begin
                 //i=0;
-            //end
+            end else if(L_data_done || (k==0) || (k==(spi_addr_idx+1))) begin
+                i=0;
+            end
         end
         RESET_CSN:begin
             if(re_access_addr) begin
@@ -208,9 +212,9 @@ module SPI_load_file(
             end
         end
         SPI_LOAD_ADDR_1:begin
+            //i=0;
             if(L_addr_done) begin
                 NEXT_STATE = SPI_LOAD_DATA;
-                //data_ready = 1'b1;
             end else begin
                 NEXT_STATE = SPI_LOAD_ADDR_1;
                 i=0;
@@ -224,20 +228,21 @@ module SPI_load_file(
     
     // Data path sequential circuit.
     always @(posedge clk) begin
+        RB_start <= 1'b0;
         write_reg_done <= 1'b0;
         L_addr_done <= 1'b0;
         L_data_done <= 1'b0;
         re_access_addr <= 1'b0;
-        RB_start <= 1'b0;
         data_ready <= 1'b1;
+        sck_zero <= 1'b0;
 
         case (PRES_STATE)
         INIT:begin
-            spi_sdo0 <= 0;
-            spi_sdo1 <= 0;
-            spi_sdo2 <= 0;
-            spi_sdo3 <= 0;
-            spi_csn <= 0;
+            spi_sdo0 <= 1'b0;
+            spi_sdo1 <= 1'b0;
+            spi_sdo2 <= 1'b0;
+            spi_sdo3 <= 1'b0;
+            spi_csn <= 1'b0;
             fetch_enable <= 1'b0;
         end
         SPI_EN_QPI:begin
@@ -292,7 +297,8 @@ module SPI_load_file(
                     spi_sdo2 <= spi_addr[32-4*(i-2)-2];
                     spi_sdo1 <= spi_addr[32-4*(i-2)-3];
                     spi_sdo0 <= spi_addr[32-4*(i-2)-4];
-                    if(i==9) begin
+                    if(i==8) begin
+                        //because 1st data is the smae as 8th data.
                         L_addr_done <= 1'b1;
                         RB_start <= 1'b1;
                     end
@@ -303,7 +309,8 @@ module SPI_load_file(
                     spi_sdo0 <= command[7-i];
                 end else if(i>7 && i<40) begin
                     spi_sdo0 <= spi_addr[32-(i-8)-1];
-                    if(i==39) begin
+                    //because spi_addr[0] is the smae as spi_addr[31].
+                    if(i==38) begin
                         L_addr_done <= 1'b1;
                         RB_start <= 1'b1;
                     end
@@ -330,6 +337,7 @@ module SPI_load_file(
             /*--- use_qspi=0 ---*/
             end else begin
                 if(i<32) begin
+                    data_ready <= 1'b0;
                     spi_sdo0 <= spi_data[31-i];
                     if(i==31) begin
                         L_data_done <= 1'b1;
@@ -341,7 +349,8 @@ module SPI_load_file(
             end // end use_qspi
         end
         RESET_CSN:begin
-            RB_start <= 1'b1;
+            data_ready <= 1'b0;
+            sck_zero <= 1'b1;
             if(i==0) begin
                 spi_csn <= 1'b1;
             end else if(i==1) begin
@@ -351,7 +360,7 @@ module SPI_load_file(
             end
         end
         SPI_LOAD_ADDR_1:begin
-            RB_start <= 1'b1;
+            data_ready <= 1'b0;
             /*--- use_qspi=1 ---*/    
             if(use_qspi) begin
                 if(i<2) begin
@@ -364,8 +373,10 @@ module SPI_load_file(
                     spi_sdo2 <= spi_addr[32-4*(i-2)-2];
                     spi_sdo1 <= spi_addr[32-4*(i-2)-3];
                     spi_sdo0 <= spi_addr[32-4*(i-2)-4];
-                    if(i==9) begin
+                    //because 1st data is the smae as 8th data.
+                    if(i==8) begin
                         L_addr_done <= 1'b1;
+                        RB_start <= 1'b1;
                     end
                 end
             /*--- use_qspi=0 ---*/    
@@ -374,8 +385,10 @@ module SPI_load_file(
                     spi_sdo0 <= command[7-i];
                 end else if(i>7 && i<40) begin
                     spi_sdo0 <= spi_addr[32-(i-8)-1];
-                    if(i==39) begin
+                    //because spi_addr[0] is the smae as spi_addr[31].
+                    if(i==38) begin
                         L_addr_done <= 1'b1;
+                        RB_start <= 1'b1;
                     end
                 end
             end // end use_qspi          

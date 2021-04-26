@@ -11,6 +11,8 @@ Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.JTAG_init
 Compiling module xil_defaultlib.SPI_load_file
+Compiling module xil_defaultlib.uart
+Compiling module xil_defaultlib.Loading_file_controller
 Compiling module xil_defaultlib.testbench
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot testbench_behav

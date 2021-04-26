@@ -3,6 +3,8 @@
 May 27 2020
 19:59:15
 /home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.sim/sim_1/behav/xsim/glbl.v,1590624368,verilog,,,,glbl,,,,,,,,
-/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sim_1/new/Load_t.v,1618565091,verilog,,,,testbench,,,,,,,,
-/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/Load_data.v,1618307378,verilog,,/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v,,JTAG_init,,,,,,,,
-/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v,1618596098,verilog,,/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sim_1/new/Load_t.v,,SPI_load_file,,,,,,,,
+/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sim_1/new/Load_t.v,1619420735,verilog,,,,testbench,,,,,,,,
+/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v,1618821207,verilog,,/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/Loading_file_controller.v,,JTAG_init,,,,,,,,
+/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/Loading_file_controller.v,1619089564,verilog,,/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v,,Loading_file_controller,,,,,,,,
+/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v,1619084991,verilog,,/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/uart.v,,SPI_load_file,,,,,,,,
+/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/uart.v,1619424449,verilog,,/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sim_1/new/Load_t.v,,uart,,,,,,,,

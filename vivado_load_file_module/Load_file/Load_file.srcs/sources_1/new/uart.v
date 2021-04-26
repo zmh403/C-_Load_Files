@@ -136,7 +136,7 @@ module uart (
         WAIT_15_CYCLE:begin
             // 15-1 cycles
             //$display($time, " i = %d", i);
-            if(i==16) begin
+            if(i==14) begin
                 start_access <= 1'b1;
             end
         end

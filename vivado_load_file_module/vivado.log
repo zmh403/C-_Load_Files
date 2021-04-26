@@ -16888,3 +16888,834 @@ Current STATE: 0011   start_access = 0
 Current STATE: 0011   start_access = 0 
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 20000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj testbench_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module JTAG_init
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/Loading_file_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Loading_file_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_load_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/uart.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sim_1/new/Load_t.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.sim/sim_1/behav/xsim'
+xelab -wto 248dc893f2d5462eae68f33b84e03316 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /data/tools/xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto 248dc893f2d5462eae68f33b84e03316 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+    LIBRARY_PATH
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.JTAG_init
+Compiling module xil_defaultlib.SPI_load_file
+Compiling module xil_defaultlib.uart
+Compiling module xil_defaultlib.Loading_file_controller
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_behav -key {Behavioral:sim_1:Functional:testbench} -tclbatch {testbench.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# log_wave -r /
+# run 20000
+JTAG_DONE:z 
+Fetch_EN:x 
+Fetch_EN:0 
+                  60 =======Start jtag=======
+                  60 =======jtag done=======
+                1920 =======Start spi_load=======
+Fetch_EN:1 
+                3370 =======SPI_load done.=======
+                5450 i =           1
+                5460 i =           2
+                5470 i =           3
+                5480 i =           4
+                5490 i =           5
+                5500 i =           6
+                5510 i =           7
+                5520 i =           8
+                5530 i =           9
+                5540 i =          10
+                5550 i =          11
+                5560 i =          12
+                5570 i =          13
+                5580 i =          14
+                5590 i =          15
+                5600 i =          16
+                8480 CHAR = 01001000  H
+                8650 i =           1
+                8660 i =           2
+                8670 i =           3
+                8680 i =           4
+                8690 i =           5
+                8700 i =           6
+                8710 i =           7
+                8720 i =           8
+                8730 i =           9
+                8740 i =          10
+                8750 i =          11
+                8760 i =          12
+                8770 i =          13
+                8780 i =          14
+                8790 i =          15
+                8800 i =          16
+               11680 CHAR = 01100101  e
+               11850 i =           1
+               11860 i =           2
+               11870 i =           3
+               11880 i =           4
+               11890 i =           5
+               11900 i =           6
+               11910 i =           7
+               11920 i =           8
+               11930 i =           9
+               11940 i =          10
+               11950 i =          11
+               11960 i =          12
+               11970 i =          13
+               11980 i =          14
+               11990 i =          15
+               12000 i =          16
+               14880 CHAR = 01101100  l
+               15050 i =           1
+               15060 i =           2
+               15070 i =           3
+               15080 i =           4
+               15090 i =           5
+               15100 i =           6
+               15110 i =           7
+               15120 i =           8
+               15130 i =           9
+               15140 i =          10
+               15150 i =          11
+               15160 i =          12
+               15170 i =          13
+               15180 i =          14
+               15190 i =          15
+               15200 i =          16
+               18080 CHAR = 01101100  l
+               18250 i =           1
+               18260 i =           2
+               18270 i =           3
+               18280 i =           4
+               18290 i =           5
+               18300 i =           6
+               18310 i =           7
+               18320 i =           8
+               18330 i =           9
+               18340 i =          10
+               18350 i =          11
+               18360 i =          12
+               18370 i =          13
+               18380 i =          14
+               18390 i =          15
+               18400 i =          16
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 20000
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 7996.680 ; gain = 64.031 ; free physical = 42667 ; free virtual = 54602
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+set_property -name {xsim.simulate.runtime} -value {63000} -objects [get_filesets sim_1]
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+set_property -name {xsim.simulate.runtime} -value {70000} -objects [get_filesets sim_1]
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj testbench_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module JTAG_init
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/Loading_file_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Loading_file_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_load_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/uart.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sim_1/new/Load_t.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.sim/sim_1/behav/xsim'
+xelab -wto 248dc893f2d5462eae68f33b84e03316 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /data/tools/xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto 248dc893f2d5462eae68f33b84e03316 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+    LIBRARY_PATH
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.JTAG_init
+Compiling module xil_defaultlib.SPI_load_file
+Compiling module xil_defaultlib.uart
+Compiling module xil_defaultlib.Loading_file_controller
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_behav -key {Behavioral:sim_1:Functional:testbench} -tclbatch {testbench.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# log_wave -r /
+# run 70000
+JTAG_DONE:z 
+Fetch_EN:x 
+Fetch_EN:0 
+                  60 =======Start jtag=======
+                  60 =======jtag done=======
+                1920 =======Start spi_load=======
+Fetch_EN:1 
+                3370 =======SPI_load done.=======
+                8480 CHAR = 01001000  H
+               11680 CHAR = 01100101  e
+               14880 CHAR = 01101100  l
+               18080 CHAR = 01101100  l
+               21280 CHAR = 10110111  ·
+               24350 CHAR = 10010000  
+               27420 CHAR = 01010111  W
+               30560 CHAR = 01101111  o
+               33760 CHAR = 01110010  r
+               36960 CHAR = 01101100  l
+               40160 CHAR = 01100100  d
+               43360 CHAR = 00100001  !
+               46560 CHAR = 00100001  !
+               49760 CHAR = 00100001  !
+               52960 CHAR = 00100001  !
+               56160 CHAR = 00100001  !
+               59360 CHAR = 01010010  R
+               62160 =======UART done.=======
+$finish called at time : 62160 ns : File "/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sim_1/new/Load_t.v" Line 136
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 70000
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 8012.688 ; gain = 16.008 ; free physical = 42474 ; free virtual = 54411
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj testbench_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module JTAG_init
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/Loading_file_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Loading_file_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_load_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/uart.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sim_1/new/Load_t.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.sim/sim_1/behav/xsim'
+xelab -wto 248dc893f2d5462eae68f33b84e03316 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /data/tools/xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto 248dc893f2d5462eae68f33b84e03316 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+    LIBRARY_PATH
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.JTAG_init
+Compiling module xil_defaultlib.SPI_load_file
+Compiling module xil_defaultlib.uart
+Compiling module xil_defaultlib.Loading_file_controller
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_behav -key {Behavioral:sim_1:Functional:testbench} -tclbatch {testbench.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# log_wave -r /
+# run 70000
+JTAG_DONE:z 
+Fetch_EN:x 
+Fetch_EN:0 
+                  60 =======Start jtag=======
+                  60 =======jtag done=======
+                1920 =======Start spi_load=======
+Fetch_EN:1 
+                3370 =======SPI_load done.=======
+                8560 CHAR = 01001000  H
+               11760 CHAR = 01100101  e
+               14960 CHAR = 01101100  l
+               18160 CHAR = 01101100  l
+               21360 CHAR = 10110111  ·
+               24510 CHAR = 10010000  
+               27660 CHAR = 10101011  «
+               30810 CHAR = 10110111  ·
+               33960 CHAR = 10111010  º
+               37110 CHAR = 01101100  l
+               40260 CHAR = 01100100  d
+               43440 CHAR = 00100001  !
+               46640 CHAR = 00100001  !
+               49840 CHAR = 00100001  !
+               53040 CHAR = 00100001  !
+               56240 CHAR = 00100001  !
+               59440 CHAR = 01010010  R
+               62510 =======UART done.=======
+$finish called at time : 62510 ns : File "/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sim_1/new/Load_t.v" Line 136
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 70000
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 8036.699 ; gain = 24.012 ; free physical = 42465 ; free virtual = 54403
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj testbench_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module JTAG_init
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/Loading_file_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Loading_file_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_load_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/uart.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sim_1/new/Load_t.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.sim/sim_1/behav/xsim'
+xelab -wto 248dc893f2d5462eae68f33b84e03316 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /data/tools/xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto 248dc893f2d5462eae68f33b84e03316 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+    LIBRARY_PATH
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.JTAG_init
+Compiling module xil_defaultlib.SPI_load_file
+Compiling module xil_defaultlib.uart
+Compiling module xil_defaultlib.Loading_file_controller
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_behav -key {Behavioral:sim_1:Functional:testbench} -tclbatch {testbench.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# log_wave -r /
+# run 70000
+JTAG_DONE:z 
+Fetch_EN:x 
+Fetch_EN:0 
+                  60 =======Start jtag=======
+                  60 =======jtag done=======
+                1920 =======Start spi_load=======
+Fetch_EN:1 
+                3370 =======SPI_load done.=======
+                8550 CHAR = 01001000  H
+               11750 CHAR = 01100101  e
+               14950 CHAR = 01101100  l
+               18150 CHAR = 01101100  l
+               21350 CHAR = 10110111  ·
+               24490 CHAR = 10010000  
+               27630 CHAR = 10101011  «
+               30770 CHAR = 10110111  ·
+               33910 CHAR = 01110010  r
+               37050 CHAR = 01101100  l
+               40230 CHAR = 01100100  d
+               43430 CHAR = 00100001  !
+               46630 CHAR = 00100001  !
+               49830 CHAR = 00100001  !
+               53030 CHAR = 00100001  !
+               56230 CHAR = 00100001  !
+               59430 CHAR = 01010010  R
+               62510 =======UART done.=======
+$finish called at time : 62510 ns : File "/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sim_1/new/Load_t.v" Line 136
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 70000
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 8052.707 ; gain = 16.008 ; free physical = 42457 ; free virtual = 54395
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj testbench_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module JTAG_init
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/Loading_file_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Loading_file_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_load_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/uart.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sim_1/new/Load_t.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.sim/sim_1/behav/xsim'
+xelab -wto 248dc893f2d5462eae68f33b84e03316 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /data/tools/xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto 248dc893f2d5462eae68f33b84e03316 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+    LIBRARY_PATH
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.JTAG_init
+Compiling module xil_defaultlib.SPI_load_file
+Compiling module xil_defaultlib.uart
+Compiling module xil_defaultlib.Loading_file_controller
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_behav -key {Behavioral:sim_1:Functional:testbench} -tclbatch {testbench.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# log_wave -r /
+# run 70000
+JTAG_DONE:z 
+Fetch_EN:x 
+Fetch_EN:0 
+                  60 =======Start jtag=======
+                  60 =======jtag done=======
+                1920 =======Start spi_load=======
+Fetch_EN:1 
+                3370 =======SPI_load done.=======
+                8470 CHAR = 01001000  H
+               11670 CHAR = 01100101  e
+               14870 CHAR = 01101100  l
+               18070 CHAR = 01101100  l
+               21270 CHAR = 10110111  ·
+               24330 CHAR = 10010000  
+               27390 CHAR = 01010111  W
+               30550 CHAR = 01101111  o
+               33750 CHAR = 01110010  r
+               36950 CHAR = 01101100  l
+               40150 CHAR = 01100100  d
+               43350 CHAR = 00100001  !
+               46550 CHAR = 00100001  !
+               49750 CHAR = 00100001  !
+               52950 CHAR = 00100001  !
+               56150 CHAR = 00100001  !
+               59350 CHAR = 01010010  R
+               62160 =======UART done.=======
+$finish called at time : 62160 ns : File "/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sim_1/new/Load_t.v" Line 136
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 70000
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 8071.715 ; gain = 19.008 ; free physical = 42458 ; free virtual = 54396
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj testbench_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module JTAG_init
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/Loading_file_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Loading_file_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_load_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/uart.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sim_1/new/Load_t.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.sim/sim_1/behav/xsim'
+xelab -wto 248dc893f2d5462eae68f33b84e03316 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /data/tools/xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto 248dc893f2d5462eae68f33b84e03316 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+    LIBRARY_PATH
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.JTAG_init
+Compiling module xil_defaultlib.SPI_load_file
+Compiling module xil_defaultlib.uart
+Compiling module xil_defaultlib.Loading_file_controller
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_behav -key {Behavioral:sim_1:Functional:testbench} -tclbatch {testbench.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# log_wave -r /
+# run 70000
+JTAG_DONE:z 
+Fetch_EN:x 
+Fetch_EN:0 
+                  60 =======Start jtag=======
+                  60 =======jtag done=======
+                1920 =======Start spi_load=======
+Fetch_EN:1 
+                3370 =======SPI_load done.=======
+                8480 CHAR = 01001000  H
+               11680 CHAR = 01100101  e
+               14880 CHAR = 01101100  l
+               18080 CHAR = 01101100  l
+               21280 CHAR = 10110111  ·
+               24350 CHAR = 10010000  
+               27420 CHAR = 01010111  W
+               30560 CHAR = 01101111  o
+               33760 CHAR = 01110010  r
+               36960 CHAR = 01101100  l
+               40160 CHAR = 01100100  d
+               43360 CHAR = 00100001  !
+               46560 CHAR = 00100001  !
+               49760 CHAR = 00100001  !
+               52960 CHAR = 00100001  !
+               56160 CHAR = 00100001  !
+               59360 CHAR = 01010010  R
+               62160 =======UART done.=======
+$finish called at time : 62160 ns : File "/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sim_1/new/Load_t.v" Line 136
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 70000
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 8087.723 ; gain = 16.008 ; free physical = 42460 ; free virtual = 54398
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj testbench_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module JTAG_init
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/Loading_file_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Loading_file_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_load_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/uart.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sim_1/new/Load_t.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.sim/sim_1/behav/xsim'
+xelab -wto 248dc893f2d5462eae68f33b84e03316 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /data/tools/xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto 248dc893f2d5462eae68f33b84e03316 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+    LIBRARY_PATH
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.JTAG_init
+Compiling module xil_defaultlib.SPI_load_file
+Compiling module xil_defaultlib.uart
+Compiling module xil_defaultlib.Loading_file_controller
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_behav -key {Behavioral:sim_1:Functional:testbench} -tclbatch {testbench.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# log_wave -r /
+# run 70000
+JTAG_DONE:z 
+Fetch_EN:x 
+Fetch_EN:0 
+                  60 =======Start jtag=======
+                  60 =======jtag done=======
+                1920 =======Start spi_load=======
+Fetch_EN:1 
+                3370 =======SPI_load done.=======
+                8480 CHAR = 01001000  H
+               11680 CHAR = 01100101  e
+               14880 CHAR = 01101100  l
+               18080 CHAR = 01101100  l
+               21280 CHAR = 10110111  ·
+               24350 CHAR = 10010000  
+               27420 CHAR = 01010111  W
+               30560 CHAR = 01101111  o
+               33760 CHAR = 01110010  r
+               36960 CHAR = 01101100  l
+               40160 CHAR = 01100100  d
+               43360 CHAR = 00100001  !
+               46560 CHAR = 00100001  !
+               49760 CHAR = 00100001  !
+               52960 CHAR = 00100001  !
+               56160 CHAR = 00100001  !
+               59360 CHAR = 00001010  
+
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 70000
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 8095.727 ; gain = 8.004 ; free physical = 42474 ; free virtual = 54412
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj testbench_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module JTAG_init
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/Loading_file_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Loading_file_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SPI_load_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/uart.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sim_1/new/Load_t.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.sim/sim_1/behav/xsim'
+xelab -wto 248dc893f2d5462eae68f33b84e03316 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /data/tools/xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto 248dc893f2d5462eae68f33b84e03316 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+    LIBRARY_PATH
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.JTAG_init
+Compiling module xil_defaultlib.SPI_load_file
+Compiling module xil_defaultlib.uart
+Compiling module xil_defaultlib.Loading_file_controller
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_behav -key {Behavioral:sim_1:Functional:testbench} -tclbatch {testbench.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# log_wave -r /
+# run 70000
+JTAG_DONE:z 
+Fetch_EN:x 
+Fetch_EN:0 
+                  60 =======Start jtag=======
+                  60 =======jtag done=======
+                1920 =======Start spi_load=======
+Fetch_EN:1 
+                3370 =======SPI_load done.=======
+                8480 CHAR = 01001000  H
+               11680 CHAR = 01100101  e
+               14880 CHAR = 01101100  l
+               18080 CHAR = 01101100  l
+               21280 CHAR = 01101111  o
+               24480 CHAR = 00100000   
+               27680 CHAR = 01010111  W
+               30880 CHAR = 01101111  o
+               34080 CHAR = 01110010  r
+               37280 CHAR = 01101100  l
+               40480 CHAR = 01100100  d
+               43680 CHAR = 00100001  !
+               46880 CHAR = 00100001  !
+               50080 CHAR = 00100001  !
+               53280 CHAR = 00100001  !
+               56480 CHAR = 00100001  !
+               59680 CHAR = 00001010  
+
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 70000
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 8124.742 ; gain = 29.016 ; free physical = 42463 ; free virtual = 54402

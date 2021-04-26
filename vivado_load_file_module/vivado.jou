@@ -98,3 +98,29 @@ source testbench.tcl
 close_sim
 launch_simulation
 source testbench.tcl
+close_sim
+launch_simulation
+source testbench.tcl
+set_property -name {xsim.simulate.runtime} -value {63000} -objects [get_filesets sim_1]
+set_property -name {xsim.simulate.runtime} -value {70000} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+source testbench.tcl
+close_sim
+launch_simulation
+source testbench.tcl
+close_sim
+launch_simulation
+source testbench.tcl
+close_sim
+launch_simulation
+source testbench.tcl
+close_sim
+launch_simulation
+source testbench.tcl
+close_sim
+launch_simulation
+source testbench.tcl
+close_sim
+launch_simulation
+source testbench.tcl

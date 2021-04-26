@@ -45,7 +45,7 @@ module uart (
     
     reg[3:0] PRES_STATE, NEXT_STATE;
     reg[7:0] character;
-    reg start_access, update_idx, update_char, next_char, valid, uart_done;
+    reg start_wait, start_access, update_idx, update_char, next_char, valid, uart_done;
     
     integer i,k;
     
@@ -64,7 +64,7 @@ module uart (
             //if(update_idx) begin
             //    k<=k+1;
             //end
-            $display("Current STATE: %b   start_access = %b ", PRES_STATE, start_access);
+            //$display("Current STATE: %b   start_access = %b ", PRES_STATE, start_access);
         end
     end
     
@@ -75,7 +75,7 @@ module uart (
         WAIT_NEG_RX:begin
             i=0;
             k=0;
-            if(start_access) begin
+            if(start_wait) begin
                 NEXT_STATE = WAIT_15_CYCLE;
             end else begin
                 //NEXT_STATE = WAIT_NEG_RX;
@@ -119,6 +119,7 @@ module uart (
     
     // Data path sequential circuit.
     always @(posedge clk) begin
+        start_wait <= 1'b0;
         start_access <= 1'b0;
         next_char <= 1'b0;
         update_idx <= 1'b0;
@@ -129,13 +130,13 @@ module uart (
         case (PRES_STATE)
         WAIT_NEG_RX:begin
             if(rx==0) begin
-                start_access <= 1'b1;
+                start_wait <= 1'b1;
             end
         end
         WAIT_15_CYCLE:begin
             // 15-1 cycles
-            $display($time, " i = %d", i);
-            if(i==15) begin
+            //$display($time, " i = %d", i);
+            if(i==16) begin
                 start_access <= 1'b1;
             end
         end
@@ -154,7 +155,7 @@ module uart (
             end
         end
         WAIT_31_CYCLE:begin
-            if(i==31) begin
+            if(i==30) begin
                 next_char <= 1'b1;
                 $display($time, " CHAR = %b  %s", character, character);
             end

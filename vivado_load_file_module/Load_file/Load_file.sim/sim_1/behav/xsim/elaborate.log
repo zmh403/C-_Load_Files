@@ -6,13 +6,4 @@ WARNING: [XSIM 43-3431] One or more environment variables have been detected whi
 Starting static elaboration
 Pass Through NonSizing Optimizer
 Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.JTAG_init
-Compiling module xil_defaultlib.SPI_load_file
-Compiling module xil_defaultlib.uart
-Compiling module xil_defaultlib.Loading_file_controller
-Compiling module xil_defaultlib.testbench
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot testbench_behav
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel

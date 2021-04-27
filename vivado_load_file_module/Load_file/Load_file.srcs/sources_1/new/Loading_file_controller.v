@@ -23,14 +23,14 @@
 module Loading_file_controller(
     input clk,
     input rst_n,
+    
     //JTAG
-    input start,
     input tdo,
     output tck,
     output trstn_o,
     output tdi_o,
     output tms_o,
-    output jtag_done,
+    
     //SPI
     // Recieve from Read buffer
     input [31:0] spi_data, //tdata_2
@@ -57,10 +57,12 @@ module Loading_file_controller(
     output spi_csn_o,
     output spi_sck_o,
     output fetch_enable_o,
+    
     // Scalar control signals
     input start_spi,
     input[31:0] spi_addr_idx,
     input use_qspi,
+    
     // Uart signals
     //gpio_out[8]
     input gpio_out_8,
@@ -69,7 +71,7 @@ module Loading_file_controller(
     // uart_tx connect to PULPino's rx
     output uart_tx,
     output[7:0] recv_data,
-    output w_valid,
+    output w_valid_o,
     output uart_done
     );
     
@@ -80,7 +82,7 @@ module Loading_file_controller(
     .rst_n(rst_n),
     .start(jtag_start),
     .tdo(tdo),
-    .tck(tck),
+    .tck_o(tck),
     .trstn_o(trstn_o),
     .tdi_o(tdi_o),
     .tms_o(tms_o),
@@ -129,7 +131,7 @@ module Loading_file_controller(
     // Output
     .tx (uart_tx),
     .char(recv_data),
-    .uart_w_valid(w_valid),
+    .uart_w_valid(w_valid_o),
     .done(uart_done)
     );
    

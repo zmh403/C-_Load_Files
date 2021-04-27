@@ -123,14 +123,12 @@ module SPI_load_file(
         end
     end
     
+    // State Control index
     always @(posedge clk, negedge rst_n) begin
         if (!rst_n) begin
             i<=0;
-            k<=0;
         end else begin
             i<=i+1;
-            //$monitor($time, " CLK=%b RST_N=%b  SPI_sdo0=%b SPI_sdo1=%b SPI_sdo2=%b SPI_sdo3=%b",clk, rst_n, spi_sdo0, spi_sdo1, spi_sdo2, spi_sdo3);
-            //$monitor("Data=%h",spi_data);
         end
     end
     
@@ -147,8 +145,6 @@ module SPI_load_file(
     
     // Control path combinational circuit.
     always @(*) begin
-        NEXT_STATE = INIT;
-
         case (PRES_STATE)
         INIT:begin
             if(start_spi) begin
@@ -223,11 +219,19 @@ module SPI_load_file(
         LOAD_DONE:begin
             NEXT_STATE = LOAD_DONE;
         end
+        default:begin
+            NEXT_STATE = INIT;
+            i=0;
+            command = 8'h1;
+            reg_val = 8'h1;
+        end
         endcase
     end
     
     // Data path sequential circuit.
     always @(posedge clk) begin
+        spi_csn  <= 1'b1;
+        //Start to access read buffer
         RB_start <= 1'b0;
         write_reg_done <= 1'b0;
         L_addr_done <= 1'b0;
@@ -238,12 +242,12 @@ module SPI_load_file(
 
         case (PRES_STATE)
         INIT:begin
-            spi_sdo0 <= 1'b0;
-            spi_sdo1 <= 1'b0;
-            spi_sdo2 <= 1'b0;
-            spi_sdo3 <= 1'b0;
-            spi_csn <= 1'b0;
             fetch_enable <= 1'b0;
+            k<=0;
+            sck_zero <= 1'b1;
+            if(start_spi) begin
+                spi_csn <= 1'b0;
+            end
         end
         SPI_EN_QPI:begin
             spi_csn  <= 1'b0;
@@ -267,24 +271,26 @@ module SPI_load_file(
             end else begin
             */  
                 //use_qspi==0
-                if(i<8) begin
-                    spi_sdo0 <= command[7-i];
-                end else if(i>7 && i<16) begin
-                    spi_sdo0 <= reg_val[8-(i-8)-1];
-                    if(i==15) begin
+                if(i<(8-1)) begin
+                    //ignore assign command[7]
+                    spi_sdo0 <= command[6-i];
+                end else if(i>(7-1) && i<(16-1)) begin
+                    spi_sdo0 <= reg_val[8-(i-7)-1];
+                    if(i==(15-1)) begin
                         write_reg_done <= 1'b1;
-                        spi_csn  <= 1'b1;
                     end
                 end
             //end // end use_qspi
         end
         SPI_IDLE:begin
+            sck_zero <= 1'b1;
             re_access_addr <= 1'b0;
             if(start_load&&valid_i) begin
                 spi_csn  <= 1'b0;
             end
         end
         SPI_LOAD_ADDR_0:begin
+            spi_csn  <= 1'b0;
             /*--- use_qspi=1 ---*/    
             if(use_qspi) begin
                 if(i<2) begin
@@ -318,6 +324,7 @@ module SPI_load_file(
             end // end use_qspi          
         end
         SPI_LOAD_DATA:begin
+            spi_csn  <= 1'b0;
             RB_start <= 1'b1;
             data_ready <= 1'b0;
             //$display("%d Cycle",i);
@@ -351,15 +358,16 @@ module SPI_load_file(
         RESET_CSN:begin
             data_ready <= 1'b0;
             sck_zero <= 1'b1;
-            if(i==0) begin
-                spi_csn <= 1'b1;
-            end else if(i==1) begin
+            if(i>0) begin
                 spi_csn <= 1'b0;
+            end
+            if(i==1) begin
                 re_access_addr <= 1'b1;
                 k <= k+1;
             end
         end
         SPI_LOAD_ADDR_1:begin
+            spi_csn <= 1'b0;
             data_ready <= 1'b0;
             /*--- use_qspi=1 ---*/    
             if(use_qspi) begin

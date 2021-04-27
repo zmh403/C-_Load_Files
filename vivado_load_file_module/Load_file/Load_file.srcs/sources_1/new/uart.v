@@ -70,7 +70,6 @@ module uart (
     
     // Control path combinational circuit.
     always @(*) begin
-        NEXT_STATE = WAIT_NEG_RX;
         case (PRES_STATE)
         WAIT_NEG_RX:begin
             i=0;
@@ -113,6 +112,11 @@ module uart (
         end
         DONE:begin
             NEXT_STATE = DONE;
+        end
+        default:begin 
+            NEXT_STATE = WAIT_NEG_RX;
+            i=0;
+            k=0;
         end
         endcase
     end
@@ -157,7 +161,7 @@ module uart (
         WAIT_31_CYCLE:begin
             if(i==30) begin
                 next_char <= 1'b1;
-                $display($time, " CHAR = %b  %s", character, character);
+                //$display($time, " CHAR = %b  %s", character, character);
             end
         end
         DONE:begin

@@ -1,0 +1,115 @@
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /data/tools/xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/xelab -wto 248dc893f2d5462eae68f33b84e03316 --incr --debug typical --relax --mt 8 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot testbench_time_synth -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+INFO: [XSIM 43-3451] SDF backannotation process started with SDF file "testbench_time_synth.sdf", for root module "testbench/Loading_file".
+INFO: [XSIM 43-3452] SDF backannotation was successful for SDF file "testbench_time_synth.sdf", for root module "testbench/Loading_file".
+Time Resolution for simulation is 1ps
+Compiling module simprims_ver.IBUFCTRL_default
+Compiling module simprims_ver.INBUF_default
+Compiling module xil_defaultlib.IBUF_UNIQ_BASE_
+Compiling module xil_defaultlib.IBUF_HD149
+Compiling module simprims_ver.BUFGCE(CE_TYPE="ASYNC",SIM_DEVIC...
+Compiling module xil_defaultlib.IBUF_HD150
+Compiling module simprims_ver.OBUF
+Compiling module xil_defaultlib.IBUF_HD151
+Compiling module simprims_ver.LUT5
+Compiling module simprims_ver.LUT6
+Compiling module simprims_ver.LUT4
+Compiling module simprims_ver.FDCE_default
+Compiling module simprims_ver.CARRY8
+Compiling module simprims_ver.x_lut2_mux4
+Compiling module simprims_ver.LUT2
+Compiling module simprims_ver.x_lut1_mux2
+Compiling module simprims_ver.LUT1
+Compiling module simprims_ver.FDRE_default
+Compiling module simprims_ver.x_lut3_mux8
+Compiling module simprims_ver.LUT3
+Compiling module simprims_ver.latchsre_ldce
+Compiling module simprims_ver.LDCE
+Compiling module xil_defaultlib.JTAG_init
+Compiling module xil_defaultlib.IBUF_HD152
+Compiling module xil_defaultlib.IBUF_HD153
+Compiling module xil_defaultlib.IBUF_HD154
+Compiling module xil_defaultlib.IBUF_HD155
+Compiling module xil_defaultlib.IBUF_HD156
+Compiling module xil_defaultlib.IBUF_HD157
+Compiling module xil_defaultlib.IBUF_HD158
+Compiling module xil_defaultlib.IBUF_HD159
+Compiling module xil_defaultlib.IBUF_HD160
+Compiling module xil_defaultlib.IBUF_HD161
+Compiling module xil_defaultlib.IBUF_HD162
+Compiling module xil_defaultlib.IBUF_HD163
+Compiling module xil_defaultlib.IBUF_HD164
+Compiling module xil_defaultlib.IBUF_HD165
+Compiling module xil_defaultlib.IBUF_HD166
+Compiling module xil_defaultlib.IBUF_HD167
+Compiling module xil_defaultlib.IBUF_HD168
+Compiling module xil_defaultlib.IBUF_HD169
+Compiling module xil_defaultlib.IBUF_HD170
+Compiling module xil_defaultlib.IBUF_HD171
+Compiling module xil_defaultlib.IBUF_HD172
+Compiling module xil_defaultlib.IBUF_HD173
+Compiling module xil_defaultlib.IBUF_HD174
+Compiling module xil_defaultlib.IBUF_HD175
+Compiling module xil_defaultlib.IBUF_HD176
+Compiling module xil_defaultlib.IBUF_HD177
+Compiling module xil_defaultlib.IBUF_HD178
+Compiling module xil_defaultlib.IBUF_HD179
+Compiling module xil_defaultlib.IBUF_HD180
+Compiling module xil_defaultlib.IBUF_HD181
+Compiling module xil_defaultlib.IBUF_HD182
+Compiling module xil_defaultlib.IBUF_HD183
+Compiling module xil_defaultlib.IBUF_HD184
+Compiling module xil_defaultlib.IBUF_HD185
+Compiling module xil_defaultlib.IBUF_HD186
+Compiling module xil_defaultlib.IBUF_HD187
+Compiling module xil_defaultlib.IBUF_HD188
+Compiling module xil_defaultlib.IBUF_HD189
+Compiling module xil_defaultlib.IBUF_HD190
+Compiling module xil_defaultlib.IBUF_HD191
+Compiling module xil_defaultlib.IBUF_HD192
+Compiling module xil_defaultlib.IBUF_HD193
+Compiling module xil_defaultlib.IBUF_HD194
+Compiling module xil_defaultlib.IBUF_HD195
+Compiling module xil_defaultlib.IBUF_HD196
+Compiling module xil_defaultlib.IBUF_HD197
+Compiling module xil_defaultlib.IBUF_HD198
+Compiling module xil_defaultlib.IBUF_HD199
+Compiling module xil_defaultlib.IBUF_HD200
+Compiling module xil_defaultlib.IBUF_HD201
+Compiling module xil_defaultlib.IBUF_HD202
+Compiling module xil_defaultlib.IBUF_HD203
+Compiling module xil_defaultlib.IBUF_HD204
+Compiling module xil_defaultlib.IBUF_HD205
+Compiling module xil_defaultlib.IBUF_HD206
+Compiling module xil_defaultlib.IBUF_HD207
+Compiling module xil_defaultlib.IBUF_HD208
+Compiling module xil_defaultlib.IBUF_HD209
+Compiling module xil_defaultlib.IBUF_HD210
+Compiling module xil_defaultlib.IBUF_HD211
+Compiling module xil_defaultlib.IBUF_HD212
+Compiling module xil_defaultlib.IBUF_HD213
+Compiling module xil_defaultlib.IBUF_HD214
+Compiling module xil_defaultlib.IBUF_HD215
+Compiling module xil_defaultlib.IBUF_HD216
+Compiling module xil_defaultlib.IBUF_HD217
+Compiling module xil_defaultlib.IBUF_HD218
+Compiling module simprims_ver.FDPE_default
+Compiling module simprims_ver.MUXF7
+Compiling module simprims_ver.MUXF8
+Compiling module xil_defaultlib.SPI_load_file
+Compiling module xil_defaultlib.IBUF_HD219
+Compiling module xil_defaultlib.uart
+Compiling module xil_defaultlib.IBUF_HD220
+Compiling module xil_defaultlib.IBUF_HD221
+Compiling module xil_defaultlib.Loading_file_controller
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_time_synth

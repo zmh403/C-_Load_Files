@@ -1,0 +1,409 @@
+
+*** Running vivado
+    with args -log Loading_file_controller.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Loading_file_controller.tcl
+
+
+****** Vivado v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source Loading_file_controller.tcl -notrace
+Command: synth_design -top Loading_file_controller -part xcu200-fsgd2104-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcu200'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcu200'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 22041
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2148.629 ; gain = 0.000 ; free physical = 37872 ; free virtual = 50447
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Loading_file_controller' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/Loading_file_controller.v:23]
+INFO: [Synth 8-6157] synthesizing module 'JTAG_init' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:23]
+	Parameter INIT bound to: 5'b00001 
+	Parameter JTAG_RESET bound to: 5'b00010 
+	Parameter JTAG_SOFTRESET bound to: 5'b00011 
+	Parameter JTAG_goto_SHIFT_IR bound to: 5'b00100 
+	Parameter JTAG_shift_SHIFT_IR bound to: 5'b00101 
+	Parameter JTAG_IDLE bound to: 5'b00110 
+	Parameter JTAG_goto_SHIFT_DR bound to: 5'b00111 
+	Parameter JTAG_shift_NBITS_SHIFT_DR_1 bound to: 5'b01000 
+	Parameter JTAG_shift_NBITS_SHIFT_DR_2 bound to: 5'b01001 
+	Parameter JTAG_shift_nbits_noex bound to: 5'b01010 
+	Parameter JTAG_shift_NBITS_SHIFT_DR_3 bound to: 5'b01011 
+	Parameter SPI_start_load_file bound to: 5'b01100 
+INFO: [Synth 8-155] case statement is not full and has no default [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:249]
+INFO: [Synth 8-6155] done synthesizing module 'JTAG_init' (1#1) [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:23]
+INFO: [Synth 8-6157] synthesizing module 'SPI_load_file' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v:23]
+	Parameter INIT bound to: 4'b0001 
+	Parameter SPI_EN_QPI bound to: 4'b0010 
+	Parameter SPI_IDLE bound to: 4'b0011 
+	Parameter SPI_LOAD_ADDR_0 bound to: 4'b0100 
+	Parameter SPI_LOAD_DATA bound to: 4'b0101 
+	Parameter RESET_CSN bound to: 4'b0110 
+	Parameter SPI_LOAD_ADDR_1 bound to: 4'b0111 
+	Parameter LOAD_DONE bound to: 4'b1000 
+INFO: [Synth 8-155] case statement is not full and has no default [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v:243]
+INFO: [Synth 8-6155] done synthesizing module 'SPI_load_file' (2#1) [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v:23]
+INFO: [Synth 8-6157] synthesizing module 'uart' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/uart.v:27]
+	Parameter BIT_PERIOD bound to: 1280 - type: integer 
+	Parameter WAIT_NEG_RX bound to: 4'b0001 
+	Parameter WAIT_15_CYCLE bound to: 4'b0010 
+	Parameter STORE_CHAR bound to: 4'b0011 
+	Parameter WAIT_31_CYCLE bound to: 4'b0100 
+	Parameter DONE bound to: 4'b0101 
+INFO: [Synth 8-155] case statement is not full and has no default [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/uart.v:134]
+INFO: [Synth 8-6155] done synthesizing module 'uart' (3#1) [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/uart.v:27]
+INFO: [Synth 8-6155] done synthesizing module 'Loading_file_controller' (4#1) [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/Loading_file_controller.v:23]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2148.629 ; gain = 0.000 ; free physical = 37946 ; free virtual = 50523
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2148.629 ; gain = 0.000 ; free physical = 37944 ; free virtual = 50521
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcu200-fsgd2104-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+INFO: [Device 21-403] Loading part xcu200-fsgd2104-2-e
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2156.484 ; gain = 7.855 ; free physical = 37944 ; free virtual = 50520
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'PRES_STATE_reg' in module 'JTAG_init'
+INFO: [Synth 8-802] inferred FSM for state register 'PRES_STATE_reg' in module 'uart'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    INIT |                             0000 |                            00001
+              JTAG_RESET |                             0001 |                            00010
+          JTAG_SOFTRESET |                             0010 |                            00011
+      JTAG_goto_SHIFT_IR |                             0011 |                            00100
+     JTAG_shift_SHIFT_IR |                             0100 |                            00101
+               JTAG_IDLE |                             0101 |                            00110
+      JTAG_goto_SHIFT_DR |                             0110 |                            00111
+JTAG_shift_NBITS_SHIFT_DR_1 |                             0111 |                            01000
+JTAG_shift_NBITS_SHIFT_DR_2 |                             1000 |                            01001
+   JTAG_shift_nbits_noex |                             1001 |                            01010
+JTAG_shift_NBITS_SHIFT_DR_3 |                             1010 |                            01011
+     SPI_start_load_file |                             1011 |                            01100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'PRES_STATE_reg' using encoding 'sequential' in module 'JTAG_init'
+WARNING: [Synth 8-327] inferring latch for variable 'i_reg' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:123]
+WARNING: [Synth 8-327] inferring latch for variable 'numbits_reg' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:121]
+WARNING: [Synth 8-327] inferring latch for variable 'jtag_datain_reg' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:122]
+WARNING: [Synth 8-327] inferring latch for variable 'i_reg' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v:152]
+WARNING: [Synth 8-327] inferring latch for variable 'reg_val_reg' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v:154]
+WARNING: [Synth 8-327] inferring latch for variable 'command_reg' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v:153]
+WARNING: [Synth 8-327] inferring latch for variable 'spi_addr_reg' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v:172]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_NEXT_STATE_reg' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/uart.v:78]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_NEXT_STATE_reg' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/uart.v:78]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+             WAIT_NEG_RX |                              000 |                             0001
+           WAIT_15_CYCLE |                              001 |                             0010
+              STORE_CHAR |                              010 |                             0011
+           WAIT_31_CYCLE |                              011 |                             0100
+                    DONE |                              100 |                             0101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'PRES_STATE_reg' using encoding 'sequential' in module 'uart'
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_NEXT_STATE_reg' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/uart.v:78]
+WARNING: [Synth 8-327] inferring latch for variable 'k_reg' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/uart.v:76]
+WARNING: [Synth 8-327] inferring latch for variable 'i_reg' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/uart.v:75]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2156.484 ; gain = 7.855 ; free physical = 37895 ; free virtual = 50472
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 6     
+	   2 Input    9 Bit       Adders := 2     
+	   2 Input    5 Bit       Adders := 2     
+	   2 Input    3 Bit       Adders := 2     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 34    
++---Muxes : 
+	  12 Input   64 Bit        Muxes := 1     
+	  12 Input   32 Bit        Muxes := 1     
+	   5 Input   32 Bit        Muxes := 1     
+	  12 Input    8 Bit        Muxes := 1     
+	   9 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 1     
+	   5 Input    8 Bit        Muxes := 1     
+	  12 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 12    
+	   5 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 7     
+	   9 Input    3 Bit        Muxes := 1     
+	   5 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   9 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 38    
+	   3 Input    1 Bit        Muxes := 3     
+	  12 Input    1 Bit        Muxes := 20    
+	   9 Input    1 Bit        Muxes := 17    
+	  10 Input    1 Bit        Muxes := 1     
+	   4 Input    1 Bit        Muxes := 1     
+	   5 Input    1 Bit        Muxes := 11    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 6840 (col length:120)
+BRAMs: 4320 (col length: RAMB18 360 RAMB36 180)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 2776.492 ; gain = 627.863 ; free physical = 37035 ; free virtual = 49616
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 2779.461 ; gain = 630.832 ; free physical = 37036 ; free virtual = 49616
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 2787.469 ; gain = 638.840 ; free physical = 37035 ; free virtual = 49616
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 2787.469 ; gain = 638.840 ; free physical = 37035 ; free virtual = 49616
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 2787.469 ; gain = 638.840 ; free physical = 37035 ; free virtual = 49616
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[31] with 1st driver pin 'jtag_i/i_reg[31]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[31] with 2nd driver pin 'jtag_i/i_reg[31]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:123]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[30] with 1st driver pin 'jtag_i/i_reg[30]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[30] with 2nd driver pin 'jtag_i/i_reg[30]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:123]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[29] with 1st driver pin 'jtag_i/i_reg[29]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[29] with 2nd driver pin 'jtag_i/i_reg[29]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:123]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[28] with 1st driver pin 'jtag_i/i_reg[28]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[28] with 2nd driver pin 'jtag_i/i_reg[28]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:123]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[27] with 1st driver pin 'jtag_i/i_reg[27]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[27] with 2nd driver pin 'jtag_i/i_reg[27]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:123]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[26] with 1st driver pin 'jtag_i/i_reg[26]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[26] with 2nd driver pin 'jtag_i/i_reg[26]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:123]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[25] with 1st driver pin 'jtag_i/i_reg[25]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[25] with 2nd driver pin 'jtag_i/i_reg[25]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:123]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[24] with 1st driver pin 'jtag_i/i_reg[24]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[24] with 2nd driver pin 'jtag_i/i_reg[24]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:123]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[23] with 1st driver pin 'jtag_i/i_reg[23]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[23] with 2nd driver pin 'jtag_i/i_reg[23]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:123]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[22] with 1st driver pin 'jtag_i/i_reg[22]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[22] with 2nd driver pin 'jtag_i/i_reg[22]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:123]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[21] with 1st driver pin 'jtag_i/i_reg[21]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[21] with 2nd driver pin 'jtag_i/i_reg[21]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:123]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[20] with 1st driver pin 'jtag_i/i_reg[20]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[20] with 2nd driver pin 'jtag_i/i_reg[20]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:123]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[19] with 1st driver pin 'jtag_i/i_reg[19]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[19] with 2nd driver pin 'jtag_i/i_reg[19]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:123]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[18] with 1st driver pin 'jtag_i/i_reg[18]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[18] with 2nd driver pin 'jtag_i/i_reg[18]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:123]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[17] with 1st driver pin 'jtag_i/i_reg[17]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[17] with 2nd driver pin 'jtag_i/i_reg[17]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:123]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[16] with 1st driver pin 'jtag_i/i_reg[16]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[16] with 2nd driver pin 'jtag_i/i_reg[16]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:123]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[15] with 1st driver pin 'jtag_i/i_reg[15]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[15] with 2nd driver pin 'jtag_i/i_reg[15]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:123]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[14] with 1st driver pin 'jtag_i/i_reg[14]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[14] with 2nd driver pin 'jtag_i/i_reg[14]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:123]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[13] with 1st driver pin 'jtag_i/i_reg[13]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[13] with 2nd driver pin 'jtag_i/i_reg[13]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:123]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[12] with 1st driver pin 'jtag_i/i_reg[12]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[12] with 2nd driver pin 'jtag_i/i_reg[12]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:123]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[11] with 1st driver pin 'jtag_i/i_reg[11]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[11] with 2nd driver pin 'jtag_i/i_reg[11]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:123]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[10] with 1st driver pin 'jtag_i/i_reg[10]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[10] with 2nd driver pin 'jtag_i/i_reg[10]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:123]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[9] with 1st driver pin 'jtag_i/i_reg[9]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[9] with 2nd driver pin 'jtag_i/i_reg[9]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:123]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[8] with 1st driver pin 'jtag_i/i_reg[8]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[8] with 2nd driver pin 'jtag_i/i_reg[8]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:123]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[7] with 1st driver pin 'jtag_i/i_reg[7]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[7] with 2nd driver pin 'jtag_i/i_reg[7]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:123]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[6] with 1st driver pin 'jtag_i/i_reg[6]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[6] with 2nd driver pin 'jtag_i/i_reg[6]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:123]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[5] with 1st driver pin 'jtag_i/i_reg[5]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[5] with 2nd driver pin 'jtag_i/i_reg[5]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:123]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[4] with 1st driver pin 'jtag_i/i_reg[4]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[4] with 2nd driver pin 'jtag_i/i_reg[4]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:123]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[3] with 1st driver pin 'jtag_i/i_reg[3]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[3] with 2nd driver pin 'jtag_i/i_reg[3]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:123]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[2] with 1st driver pin 'jtag_i/i_reg[2]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[2] with 2nd driver pin 'jtag_i/i_reg[2]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:123]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[1] with 1st driver pin 'jtag_i/i_reg[1]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[1] with 2nd driver pin 'jtag_i/i_reg[1]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:123]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[0] with 1st driver pin 'jtag_i/i_reg[0]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin jtag_i/i[0] with 2nd driver pin 'jtag_i/i_reg[0]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v:123]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin spi_i/i[31] with 1st driver pin 'spi_i/i_reg[31]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin spi_i/i[31] with 2nd driver pin 'spi_i/i_reg[31]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v:152]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin spi_i/i[30] with 1st driver pin 'spi_i/i_reg[30]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin spi_i/i[30] with 2nd driver pin 'spi_i/i_reg[30]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v:152]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin spi_i/i[29] with 1st driver pin 'spi_i/i_reg[29]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin spi_i/i[29] with 2nd driver pin 'spi_i/i_reg[29]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v:152]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin spi_i/i[28] with 1st driver pin 'spi_i/i_reg[28]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin spi_i/i[28] with 2nd driver pin 'spi_i/i_reg[28]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v:152]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin spi_i/i[27] with 1st driver pin 'spi_i/i_reg[27]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin spi_i/i[27] with 2nd driver pin 'spi_i/i_reg[27]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v:152]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin spi_i/i[26] with 1st driver pin 'spi_i/i_reg[26]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin spi_i/i[26] with 2nd driver pin 'spi_i/i_reg[26]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v:152]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin spi_i/i[25] with 1st driver pin 'spi_i/i_reg[25]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin spi_i/i[25] with 2nd driver pin 'spi_i/i_reg[25]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v:152]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin spi_i/i[24] with 1st driver pin 'spi_i/i_reg[24]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin spi_i/i[24] with 2nd driver pin 'spi_i/i_reg[24]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v:152]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin spi_i/i[23] with 1st driver pin 'spi_i/i_reg[23]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin spi_i/i[23] with 2nd driver pin 'spi_i/i_reg[23]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v:152]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin spi_i/i[22] with 1st driver pin 'spi_i/i_reg[22]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin spi_i/i[22] with 2nd driver pin 'spi_i/i_reg[22]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v:152]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin spi_i/i[21] with 1st driver pin 'spi_i/i_reg[21]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin spi_i/i[21] with 2nd driver pin 'spi_i/i_reg[21]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v:152]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin spi_i/i[20] with 1st driver pin 'spi_i/i_reg[20]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin spi_i/i[20] with 2nd driver pin 'spi_i/i_reg[20]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v:152]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin spi_i/i[19] with 1st driver pin 'spi_i/i_reg[19]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin spi_i/i[19] with 2nd driver pin 'spi_i/i_reg[19]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v:152]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin spi_i/i[18] with 1st driver pin 'spi_i/i_reg[18]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin spi_i/i[18] with 2nd driver pin 'spi_i/i_reg[18]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v:152]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin spi_i/i[17] with 1st driver pin 'spi_i/i_reg[17]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin spi_i/i[17] with 2nd driver pin 'spi_i/i_reg[17]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v:152]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin spi_i/i[16] with 1st driver pin 'spi_i/i_reg[16]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin spi_i/i[16] with 2nd driver pin 'spi_i/i_reg[16]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v:152]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin spi_i/i[15] with 1st driver pin 'spi_i/i_reg[15]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin spi_i/i[15] with 2nd driver pin 'spi_i/i_reg[15]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v:152]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin spi_i/i[14] with 1st driver pin 'spi_i/i_reg[14]__0/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v:129]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin spi_i/i[14] with 2nd driver pin 'spi_i/i_reg[14]/Q' [/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v:152]
+INFO: [Common 17-14] Message 'Synth 8-6859' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|       96|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 2787.469 ; gain = 638.840 ; free physical = 37035 ; free virtual = 49616
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 2787.469 ; gain = 638.840 ; free physical = 37035 ; free virtual = 49616
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 2787.469 ; gain = 638.840 ; free physical = 37035 ; free virtual = 49616
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 2787.469 ; gain = 638.840 ; free physical = 37035 ; free virtual = 49616
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     5|
+|2     |CARRY8 |    70|
+|3     |LUT1   |    13|
+|4     |LUT2   |   416|
+|5     |LUT3   |    44|
+|6     |LUT4   |    91|
+|7     |LUT5   |    33|
+|8     |LUT6   |   175|
+|9     |MUXF7  |     5|
+|10    |MUXF8  |     2|
+|11    |FDCE   |    74|
+|12    |FDPE   |     1|
+|13    |FDRE   |   106|
+|14    |LD     |   142|
+|15    |IBUF   |    74|
+|16    |OBUF   |    26|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+--------------+------+
+|      |Instance |Module        |Cells |
++------+---------+--------------+------+
+|1     |top      |              |  1277|
+|2     |  jtag_i |JTAG_init     |   415|
+|3     |  spi_i  |SPI_load_file |   539|
+|4     |  uart_i |uart          |   201|
++------+---------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 2787.469 ; gain = 638.840 ; free physical = 37035 ; free virtual = 49616
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 192 critical warnings and 12 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 2787.469 ; gain = 638.840 ; free physical = 37036 ; free virtual = 49617
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 2787.477 ; gain = 638.840 ; free physical = 37036 ; free virtual = 49617
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2798.438 ; gain = 0.000 ; free physical = 37108 ; free virtual = 49688
+INFO: [Netlist 29-17] Analyzing 298 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2927.121 ; gain = 0.000 ; free physical = 36997 ; free virtual = 49578
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 221 instances were transformed.
+  BUFG => BUFGCE: 5 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 74 instances
+  LD => LDCE: 142 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+29 Infos, 12 Warnings, 100 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 2927.121 ; gain = 778.641 ; free physical = 37153 ; free virtual = 49733
+INFO: [Common 17-1381] The checkpoint '/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.runs/synth_1/Loading_file_controller.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Loading_file_controller_utilization_synth.rpt -pb Loading_file_controller_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 27 16:00:34 2021...

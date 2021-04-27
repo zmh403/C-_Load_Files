@@ -25,7 +25,7 @@ module JTAG_init(
     input rst_n,
     input start,
     input tdo,
-    output tck,
+    output tck_o,
     output trstn_o,
     output tdi_o,
     output tms_o,
@@ -59,17 +59,8 @@ module JTAG_init(
     integer i;
     
     // Output reg
-    reg [31:0] spi_addr_reg;
-    reg [31:0] spi_data_reg;
-    reg spi_sdo0;
-    reg spi_sdo1;
-    reg spi_sdo2; 
-    reg spi_sdo3; 
-    reg spi_csn;
-    reg trstn;
-    reg tdi;
-    reg tms;
-
+    reg spi_csn, trstn, tdi, tms, tck;
+    reg tck_zero, reset_i;
     
     //state control signal
     reg SEQ_done;
@@ -84,19 +75,27 @@ module JTAG_init(
     reg JSSDR3_done;
     reg JSNN_done; //shift_nbits_noex
     
-    //Start Loading File.
+    //JTAG finish setup, and start Loading File.
     reg START_LF;
     
-    assign tck = clk;  
+    //Modify tck
+    assign tck_o = tck;
     assign trstn_o = trstn;
     assign tdi_o = tdi;
     assign tms_o = tms;
     assign jtag_done = START_LF;
     
+    // Control spi_sck
+    always @(*) begin
+        if (tck_zero) begin
+            tck = 1'b0;
+        end else begin
+            tck = clk;
+        end
+    end
+    
     always @(posedge clk, negedge rst_n) begin
         if (!rst_n) begin
-            numbits <= 8'b0;
-            jtag_datain <= 64'b0;
             jtag_instr <= 4'b1000;
             i<=0;
         end else begin
@@ -110,8 +109,6 @@ module JTAG_init(
             PRES_STATE <= INIT;
         end else begin
             PRES_STATE <= NEXT_STATE;
-            //$display("PRES_STATE: %b, TDI: %b, INDEX: %d", PRES_STATE, tdi, i);
-            
         end
     end
     
@@ -121,8 +118,10 @@ module JTAG_init(
         //i=0;
         case (PRES_STATE)
         INIT:begin
+            numbits = 8'b0;
+            jtag_datain = 64'b0;
+            i=0;
             if(start) begin
-                i=0;
                 NEXT_STATE = JTAG_RESET;
             end else begin
                 NEXT_STATE = INIT;
@@ -220,15 +219,20 @@ module JTAG_init(
                 NEXT_STATE = SPI_start_load_file;
             end
         end
-        SPI_start_load_file: begin
+        SPI_start_load_file:begin
             i=0;
             NEXT_STATE = SPI_start_load_file;
+        end
+        default:begin
+            numbits = 8'b0;
+            jtag_datain = 64'b0;
         end
         endcase
     end
 
     // Data path sequential circuit.
     always @(posedge clk) begin
+        tck_zero <= 1'b0;
         SEQ_done <= 1'b0;
         JRST_done <= 1'b0;
         JSWRST_done <= 1'b0;
@@ -244,6 +248,7 @@ module JTAG_init(
         
         case (PRES_STATE)
         INIT:begin
+            tck_zero <= 1'b1;
             tms <= 1'b0;
             trstn <= 1'b0;
             tdi <= 1'b0;
@@ -348,7 +353,7 @@ module JTAG_init(
             //03_1A10_7008_0001
             if(i<numbits) begin
                 trstn <= 1'b1;
-                tms = 1'b0;
+                tms <= 1'b0;
                 if(i==(numbits-1))
                     tms <= 1'b1;
                 tdi <= jtag_datain[i];
@@ -390,7 +395,7 @@ module JTAG_init(
                 trstn <= 1'b1;
                 tms <= 1'b0;
                 if(i==(numbits-1))
-                    tms = 1'b1;
+                    tms <= 1'b1;
                 tdi <= jtag_datain[i];
             end
             //access tdo delay 1 cycle
@@ -410,6 +415,7 @@ module JTAG_init(
         //End: Configure JTAG and set boot address  
         SPI_start_load_file: begin
             START_LF <= 1'b1;
+            tck_zero <= 1'b1;
         end
         endcase
     end

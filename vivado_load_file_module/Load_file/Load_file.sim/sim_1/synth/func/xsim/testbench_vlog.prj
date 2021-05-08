@@ -1,7 +1,0 @@
-# compile verilog/system verilog design source files
-verilog xil_defaultlib  \
-"testbench_func_synth.v" \
-"../../../../../Load_file.srcs/sim_1/new/Load_t.v" \
-
-# Do not sort compile order
-nosort

@@ -78,14 +78,13 @@ module JTAG_init(
     //JTAG finish setup, and start Loading File.
     reg START_LF;
     
-    //Modify tck
     assign tck_o = tck;
     assign trstn_o = trstn;
     assign tdi_o = tdi;
     assign tms_o = tms;
     assign jtag_done = START_LF;
     
-    // Control spi_sck
+    // Control tck
     always @(*) begin
         if (tck_zero) begin
             tck = 1'b0;
@@ -99,7 +98,11 @@ module JTAG_init(
             jtag_instr <= 4'b1000;
             i<=0;
         end else begin
-            i<=i+1;
+            $display("i: %d", i);
+            if(reset_i)
+                i<=0;
+            else
+                i<=i+1;
         end
     end
  
@@ -109,123 +112,121 @@ module JTAG_init(
             PRES_STATE <= INIT;
         end else begin
             PRES_STATE <= NEXT_STATE;
+            $display("Current STATE: %b", PRES_STATE);
         end
     end
     
     // Control path combinational circuit.
     always @(*) begin
         NEXT_STATE = INIT;
-        //i=0;
+        reset_i = 1'b0;
+        numbits = 8'b0;
+        jtag_datain = 64'b0;
         case (PRES_STATE)
         INIT:begin
-            numbits = 8'b0;
-            jtag_datain = 64'b0;
-            i=0;
             if(start) begin
                 NEXT_STATE = JTAG_RESET;
+                reset_i = 1'b1;
             end else begin
                 NEXT_STATE = INIT;
             end
         end
         JTAG_RESET:begin
             if(!JRST_done) begin
-                i=0;
                 NEXT_STATE = JTAG_RESET;
             end else begin
                 NEXT_STATE = JTAG_SOFTRESET;
+                reset_i = 1'b1;
             end
         end
         JTAG_SOFTRESET:begin
             if(!JSWRST_done) begin
-                i=0;
                 NEXT_STATE = JTAG_SOFTRESET;
             end else begin
                 NEXT_STATE = JTAG_goto_SHIFT_IR;
+                reset_i = 1'b1;
             end
         end
         JTAG_goto_SHIFT_IR:begin
             if(!GSIR_done) begin
-                i=0;
                 NEXT_STATE = JTAG_goto_SHIFT_IR;
             end else begin
                 NEXT_STATE = JTAG_shift_SHIFT_IR;
+                reset_i = 1'b1;
             end
         end
         JTAG_shift_SHIFT_IR:begin
             if(!SSIR_done) begin
-                i=0;
                 NEXT_STATE = JTAG_shift_SHIFT_IR;
             end else begin
                 NEXT_STATE = JTAG_IDLE;
+                reset_i = 1'b1;
             end
         end
         JTAG_IDLE:begin
             if(!JIDLE_done) begin
-                i=0;
                 NEXT_STATE = JTAG_IDLE;
             end else begin
                 NEXT_STATE = JTAG_goto_SHIFT_DR;
+                reset_i = 1'b1;
             end
         end
         JTAG_goto_SHIFT_DR:begin
             if(!JGSDR_done) begin
-                i=0;
                 NEXT_STATE = JTAG_goto_SHIFT_DR;
             end else begin
                 NEXT_STATE = JTAG_shift_NBITS_SHIFT_DR_1;
-                //6 bits in DR_1
-                numbits = 8'h06;
-                jtag_datain = 64'h20;
+                reset_i = 1'b1;
             end
         end
         JTAG_shift_NBITS_SHIFT_DR_1:begin
             if(!JSSDR1_done) begin
-                i=0;
                 NEXT_STATE = JTAG_shift_NBITS_SHIFT_DR_1;
+                //6 bits in DR_1
+                numbits = 8'h06;
+                jtag_datain = 64'h20;
             end else begin
                 NEXT_STATE = JTAG_shift_NBITS_SHIFT_DR_2;
-                //53 bits in DR_2
-                numbits = 8'h35;
-                jtag_datain = 64'h03_1A10_7008_0001;
+                reset_i = 1'b1;
             end
         end
         JTAG_shift_NBITS_SHIFT_DR_2:begin
             if(!JSSDR2_done) begin
-                i=0;
                 NEXT_STATE = JTAG_shift_NBITS_SHIFT_DR_2;
+                //53 bits in DR_2
+                numbits = 8'h35;
+                jtag_datain = 64'h03_1A10_7008_0001;
             end else begin
                 NEXT_STATE = JTAG_shift_nbits_noex;
-                //17 bits in noex
-                numbits = 8'h11;
-                jtag_datain = 64'h1;
+                reset_i = 1'b1;
             end
         end
         JTAG_shift_nbits_noex:begin
             if(!JSNN_done) begin
-                i=0;
                 NEXT_STATE = JTAG_shift_nbits_noex;
+                //17 bits in noex
+                numbits = 8'h11;
+                jtag_datain = 64'h1;
             end else begin
                 NEXT_STATE = JTAG_shift_NBITS_SHIFT_DR_3;
-                ////34 bits in DR_3
-                numbits = 8'h22;
-                jtag_datain = 64'h11111111;
+                reset_i = 1'b1;
             end
         end
         JTAG_shift_NBITS_SHIFT_DR_3:begin
             if(!JSSDR3_done) begin
-                i=0;
                 NEXT_STATE = JTAG_shift_NBITS_SHIFT_DR_3;
+                //34 bits in DR_3
+                numbits = 8'h22;
+                jtag_datain = 64'h11111111;
             end else begin
                 NEXT_STATE = SPI_start_load_file;
+                reset_i = 1'b1;
             end
         end
         SPI_start_load_file:begin
-            i=0;
+            //i=0;
+            reset_i = 1'b1;
             NEXT_STATE = SPI_start_load_file;
-        end
-        default:begin
-            numbits = 8'b0;
-            jtag_datain = 64'b0;
         end
         endcase
     end
@@ -255,6 +256,7 @@ module JTAG_init(
         end
         JTAG_RESET:begin
             if(i==0) begin
+                tck_zero <= 1'b1;
                 tms <= 1'b0;
                 trstn <= 1'b0;
                 tdi <= 1'b0;

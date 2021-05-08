@@ -1,6 +1,6 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
-"../../../../Load_file.srcs/sources_1/new/JTAG_init.v" \
+"../../../../Load_file.srcs/sources_1/new/JTAG_init_parser.v" \
 "../../../../Load_file.srcs/sources_1/new/Loading_file_controller.v" \
 "../../../../Load_file.srcs/sources_1/new/SPI_load_file.v" \
 "../../../../Load_file.srcs/sources_1/new/uart.v" \

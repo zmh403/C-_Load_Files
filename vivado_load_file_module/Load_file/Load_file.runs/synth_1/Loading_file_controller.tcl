@@ -70,8 +70,8 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param synth.incrementalSynthesisCache ./.Xil/Vivado-31491-jjlab-i9/incrSyn
-set_param chipscope.maxJobs 3
+set_param synth.incrementalSynthesisCache ./.Xil/Vivado-22576-jjlab-i9/incrSyn
+set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
@@ -90,7 +90,7 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
-  /home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init.v
+  /home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/JTAG_init_parser.v
   /home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/SPI_load_file.v
   /home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/uart.v
   /home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sources_1/new/Loading_file_controller.v

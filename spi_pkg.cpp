@@ -10,10 +10,12 @@ clock_t now = clock();
 while(clock()-now < time);
 }
 
-int SPI_pkg::Load_file(unsigned long int* spi_addr,unsigned long int* spi_data){
+int SPI_pkg::Load_file(unsigned long int* spi_data, int* instr_num){
 	char addr_buffer[10000][10];
 	char data_buffer[10000][10];
+	unsigned long int spi_addr[10000];
 	int temp_line = 0;
+	int addr_cmd_num = 0;
 	// Read the file
 	ifstream ifs;
 	char buffer[20];
@@ -35,12 +37,18 @@ int SPI_pkg::Load_file(unsigned long int* spi_addr,unsigned long int* spi_data){
 		//file_line:1000 ---> temp_line:1001 not 1000
 		temp_line--;
 		// Convert the bits of data from hex to decimal in interger type.
-		for (int i=0;i<temp_line;i++){
+		for(int i=0;i<temp_line;i++){
 			spi_addr[i] = Sum_of_hex(addr_buffer[i]);
 			spi_data[i] = Sum_of_hex(data_buffer[i]);
+			if(spi_addr[i]==1048576){
+				addr_cmd_num = i;
+				cout<<"ADDR num: "<<addr_cmd_num<<endl;
+			}
 		}
     }
-	return temp_line;
+	*instr_num = temp_line;
+	return addr_cmd_num;
+	//return temp_line;
 }
 
 // Convert_8-bit_Hex_char to int
@@ -167,9 +175,17 @@ void SPI_pkg::spi_recv_data(bool use_qspi, unsigned long int data){
 
 void SPI_pkg::spi_load (bool use_qspi){
 	int instr_line = 0;
+	int addr_cmd_num = 0;
 	int spi_addr_old = 0;
-	instr_line = Load_file(spi_addr,spi_data);
+	addr_cmd_num = Load_file(spi_data,&instr_line);
+	for(int i=0;i<addr_cmd_num;i++){
+		spi_addr[i] = i*4;
+	}
+	for(int i=addr_cmd_num;i<instr_line;i++){
+		spi_addr[i] = 1048576 + (i-addr_cmd_num)*4;
+	}
 	cout<<"[SPI] Loading Instruction RAM"<<endl;
+	//cout<<"Instruction Total num: "<<instr_line<<endl;
 	
 	Delay(100);
 	//Implement spi_send_cmd_addr in the hardware.
@@ -197,8 +213,15 @@ void SPI_pkg::spi_load (bool use_qspi){
 
 void SPI_pkg::spi_check(bool use_qspi){
 	int instr_line = 0;
+	int addr_cmd_num = 0;
 	int spi_addr_old = 0;
-	instr_line = Load_file(spi_addr,spi_data);
+	addr_cmd_num = Load_file(spi_data,&instr_line);
+	for(int i=0;i<addr_cmd_num;i++){
+		spi_addr[i] = i*4;
+	}
+	for(int i=addr_cmd_num;i<instr_line;i++){
+		spi_addr[i] = 1048576 + (i-addr_cmd_num)*4;
+	}
 	cout<<"[SPI] Loading Instruction RAM"<<endl;
 	bool spi_csn = 0;
 	bool spi_sck = 0;

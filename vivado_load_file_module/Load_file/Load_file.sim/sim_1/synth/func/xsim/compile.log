@@ -1,5 +1,5 @@
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.sim/sim_1/synth/func/xsim/testbench_func_synth.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module JTAG_init
+INFO: [VRFC 10-311] analyzing module JTAG_init_parser
 INFO: [VRFC 10-311] analyzing module Loading_file_controller
 INFO: [VRFC 10-311] analyzing module SPI_load_file
 INFO: [VRFC 10-311] analyzing module uart

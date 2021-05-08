@@ -24,7 +24,7 @@ public:
 
 	SPI_pkg(bool csn,unsigned long int* addr,unsigned long int* data,int* data_recv,int padmode);
 	void Delay(int time);
-	int Load_file (unsigned long int* spi_addr,unsigned long int* spi_data);
+	int Load_file (unsigned long int* spi_data, int*);
 	unsigned long int Sum_of_hex(char* buffer);
 	//void Char_to_int(char* addr_buffer,char* data_buffer);
 	void spi_send_cmd_addr(bool use_qspi,int command,unsigned long int addr);

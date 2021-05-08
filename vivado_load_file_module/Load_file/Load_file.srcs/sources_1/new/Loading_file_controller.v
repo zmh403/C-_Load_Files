@@ -21,7 +21,8 @@
 
 
 module Loading_file_controller(
-    input clk,
+    input clk_1,
+    input clk_2,
     input rst_n,
     
     //JTAG
@@ -77,8 +78,8 @@ module Loading_file_controller(
     
     wire spi_start_load,jtag_start;
     
-    JTAG_init jtag_i (
-    .clk(clk),
+    JTAG_init_parser jtag_i (
+    .clk(clk_2),
     .rst_n(rst_n),
     .start(jtag_start),
     .tdo(tdo),
@@ -91,7 +92,7 @@ module Loading_file_controller(
     
     SPI_load_file spi_i (
     //Input
-    .clk(clk),
+    .clk(clk_2),
     .rst_n(rst_n),
     .spi_data(spi_data),
     .valid_i(r_valid_i),
@@ -121,9 +122,9 @@ module Loading_file_controller(
     .fetch_enable_o(fetch_enable_o)
     );
     
-    uart  uart_i (
+    uart uart_i (
     // Input
-    .clk (clk),
+    .clk (clk_1),
     .rst_n (rst_n),
     .gpio(gpio_out_8),
     .rx_en (1'b1),

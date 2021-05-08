@@ -46,6 +46,7 @@ module uart (
     reg[3:0] PRES_STATE, NEXT_STATE;
     reg[7:0] character;
     reg start_wait, start_access, update_idx, update_char, next_char, valid, uart_done;
+    reg reset_i;
     
     integer i,k;
     
@@ -54,30 +55,66 @@ module uart (
     assign uart_w_valid = valid;
     assign done = uart_done;
 
+    // State Control index
+    always @(posedge clk) begin
+        if(reset_i) begin
+            i<=0;
+        end else begin
+            i<=i+1;
+        end
+    end
+
         // Control path sequential circuit.
     always @(posedge clk, negedge rst_n) begin
         if (!rst_n) begin
             PRES_STATE <= WAIT_NEG_RX;
         end else begin
             PRES_STATE <= NEXT_STATE;
-            i<=i+1;
-            //if(update_idx) begin
-            //    k<=k+1;
-            //end
-            //$display("Current STATE: %b   start_access = %b ", PRES_STATE, start_access);
+            if(gpio) begin
+                PRES_STATE <= DONE;
+            end
+            //$display($time, " Current STATE: %b ", PRES_STATE);
         end
+    end
+    
+    always @(*) begin
+        reset_i = 1'b0;
+        case (PRES_STATE)
+        WAIT_NEG_RX:begin
+            reset_i = 1'b1;
+            k=0;
+        end
+        WAIT_15_CYCLE:begin
+             if(start_access) begin
+                reset_i = 1'b1;
+            end
+        end
+        STORE_CHAR:begin
+            if(update_idx) begin
+                k=k+1;
+                reset_i = 1'b1;
+            end else if(update_char) begin
+                reset_i = 1'b1;
+            end
+        end
+        WAIT_31_CYCLE:begin
+            if(next_char) begin
+                k=0;
+                reset_i = 1'b1;
+            end
+        end
+        DONE:begin
+        end
+        endcase
     end
     
     // Control path combinational circuit.
     always @(*) begin
+        NEXT_STATE = WAIT_NEG_RX;
         case (PRES_STATE)
         WAIT_NEG_RX:begin
-            i=0;
-            k=0;
             if(start_wait) begin
                 NEXT_STATE = WAIT_15_CYCLE;
-            end else begin
-                //NEXT_STATE = WAIT_NEG_RX;
             end
         end
         WAIT_15_CYCLE:begin
@@ -88,35 +125,22 @@ module uart (
             end
         end
         STORE_CHAR:begin
-            NEXT_STATE = STORE_CHAR;
             //$display("en_Char = %b, en_idx = %b", update_char, update_idx);
             if(update_char) begin
                 NEXT_STATE = WAIT_31_CYCLE;
-            end else if(update_idx) begin
-                k=k+1;
             end else begin
-                // Only enter this state once.
-                i=0;
+                NEXT_STATE = STORE_CHAR;
             end
         end
         WAIT_31_CYCLE:begin
-            if(gpio) begin
-                NEXT_STATE = DONE;
-            end else if(next_char) begin
+            if(next_char) begin
                 NEXT_STATE = WAIT_NEG_RX;
-                k=0;
             end else begin
                 NEXT_STATE = WAIT_31_CYCLE;
-                i=0;
             end
         end
         DONE:begin
             NEXT_STATE = DONE;
-        end
-        default:begin 
-            NEXT_STATE = WAIT_NEG_RX;
-            i=0;
-            k=0;
         end
         endcase
     end

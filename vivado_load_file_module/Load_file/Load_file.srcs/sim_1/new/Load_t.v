@@ -21,7 +21,7 @@
 
 
 module testbench;
-    parameter cyc = 10;
+    parameter cyc = 40;
     parameter delay = 1;
 
     reg clk, rst_n;
@@ -41,8 +41,9 @@ module testbench;
   
     integer i, addr_num;
     
-    Loading_file_controller Loading_file (
-    .clk(clk),
+    Loading_file_controller LFM_i (
+    .clk_1(clk),
+    .clk_2(clk),
     .rst_n(rst_n),
     
     .tdo(tdi),
@@ -86,15 +87,16 @@ module testbench;
 
     always begin
         #(cyc/2) clk = ~clk;
+        //#(cyc1/2) clk1 = ~clk1;
         if(u_valid) begin
-            $display($time, " CHAR = %d  %s", uart_data, uart_data);
+            $display($time, " CHAR = %h  %s", uart_data, uart_data);
         end
     end
     
     initial begin
         //$monitor($time, " CLK=%b", clk);
         //$monitor($time, " CLK=%b RST_N=%b TCK=%b TDO=%b TRSTN=%b TDI=%b TMS=%b",clk, rst_n, tck, tdi, trstn, tdo, tms);
-        //$monitor($time, " CLK=%b RST_N=%b  SPI_sdo0=%b SPI_sdo1=%b SPI_sdo2=%b SPI_sdo3=%b",clk, rst_n, spi_sdo0, spi_sdo1, spi_sdo2, spi_sdo3);
+        //$monitor($time, "  SPI_sdo0=%b SPI_sdo1=%b SPI_sdo2=%b SPI_sdo3=%b", spi_sdo0, spi_sdo1, spi_sdo2, spi_sdo3);
         //$monitor("JTAG_DONE:%b ", jtag_done);
         //$monitor("RB_START=%b", rb_start_t);
         $monitor("Fetch_EN:%b ", fetch_enable);
@@ -103,18 +105,18 @@ module testbench;
         
     end
     
-    assign jtag_start = Loading_file.jtag_start;
-    assign jtag_done = Loading_file.spi_start_load;
+    assign jtag_start = LFM_i.jtag_start;
+    assign jtag_done = LFM_i.spi_start_load;
     
     initial begin
     clk = 1;
-    rst_n = 1;
+    rst_n = 0;
     addr_num = 9;
     tx = 1;
     gpio=0;
     
-    #(cyc) rst_n = 0;
-    #(cyc*2) rst_n = 1;
+
+    #(cyc*3) rst_n = 1;
     #(cyc) start_sim = 1'b1; ap_start=1'b1; valid_t = 1'b0;
     #(cyc*2) start_sim = 1'b0; ap_done = 1'b0;
    

@@ -1,0 +1,47 @@
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+Fetch_EN:x 
+Fetch_EN:0 
+                 800 =======Start jtag=======
+                7080 =======jtag done=======
+                7480 =======Start spi_load=======
+Fetch_EN:1 
+               13280 =======SPI_load done.=======
+               32420 CHAR = 48  H
+               32440 CHAR = 48  H
+               45220 CHAR = 65  e
+               45240 CHAR = 65  e
+               58020 CHAR = 6c  l
+               58040 CHAR = 6c  l
+               70820 CHAR = 6c  l
+               70840 CHAR = 6c  l
+               83620 CHAR = 6f  o
+               83640 CHAR = 6f  o
+               96420 CHAR = 20   
+               96440 CHAR = 20   
+              109220 CHAR = 57  W
+              109240 CHAR = 57  W
+              122020 CHAR = 6f  o
+              122040 CHAR = 6f  o
+              134820 CHAR = 72  r
+              134840 CHAR = 72  r
+              147620 CHAR = 6c  l
+              147640 CHAR = 6c  l
+              160420 CHAR = 64  d
+              160440 CHAR = 64  d
+              173220 CHAR = 21  !
+              173240 CHAR = 21  !
+              186020 CHAR = 21  !
+              186040 CHAR = 21  !
+              198820 CHAR = 21  !
+              198840 CHAR = 21  !
+              211620 CHAR = 21  !
+              211640 CHAR = 21  !
+              224420 CHAR = 21  !
+              224440 CHAR = 21  !
+              237220 CHAR = 0a  
+
+              237240 CHAR = 0a  
+
+              243320 =======UART done.=======
+$finish called at time : 243320 ns : File "/home/zmhuang/workspace/C-_Load_Files/vivado_load_file_module/Load_file/Load_file.srcs/sim_1/new/Load_t.v" Line 148

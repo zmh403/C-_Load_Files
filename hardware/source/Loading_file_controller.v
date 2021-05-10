@@ -35,14 +35,11 @@ module Loading_file_controller(
     //SPI
     // Recieve from Read buffer
     input [31:0] spi_data, //tdata_2
-    input r_valid_i,
+    //input r_valid_i,
+    // Control FSM to DONE state
     input r_last_i,
-    // Read_buffer control
-    input ap_start,
-    output rb_start,
+    // Interconnect to Read_buffer
     output rb_ready,
-    // Control FSM
-    input rb_done,
     //Output to PULP_System_L4
     output r_valid_o,
     output r_last_o,
@@ -95,10 +92,8 @@ module Loading_file_controller(
     .clk(clk_2),
     .rst_n(rst_n),
     .spi_data(spi_data),
-    .valid_i(r_valid_i),
+    //.valid_i(r_valid_i),
     .last_i(r_last_i),
-    .ap_start(ap_start),
-    .ap_done(rb_done),
     .spi_sdi0(spi_sdi0),
     .spi_sdi1(spi_sdi1),
     .spi_sdi2(spi_sdi2),
@@ -108,9 +103,8 @@ module Loading_file_controller(
     .spi_addr_idx(spi_addr_idx),
     .use_qspi(use_qspi),
     //Output
-    .valid(r_valid_o),
+    //.valid(r_valid_o),
     .last(r_last_o),
-    .rb_start(rb_start),
     .rb_ready(rb_ready),
     .jtag_setup(jtag_start),
     .spi_sdo0_o(spi_sdo0_o),

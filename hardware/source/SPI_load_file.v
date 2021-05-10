@@ -26,16 +26,13 @@ module SPI_load_file(
     
     // Recieve from Read buffer
     input [31:0] spi_data, //tdata_2
-    input valid_i,
+    //input valid_i,
+    // Control FSM to DONE state
     input last_i,
-    // Read_buffer control
-    input ap_start,
-    output rb_start,
+    // Interconnect to Read_buffer
     output rb_ready,
-    // Control FSM
-    input ap_done,
     //Output to PULP_System_L4
-    output valid,
+    //output valid,
     output last,
     // Connect to JTAG
     input start_load,
@@ -97,15 +94,15 @@ module SPI_load_file(
     
     //control Read buffer
     reg RB_start;
-    reg data_ready;
+    //reg tvalid,
+    reg tlast, data_ready;
     
     
     assign jtag_setup = write_reg_done;
-    assign rb_start = RB_start & ap_start;
     assign rb_ready = data_ready;
     
-    assign valid = valid_i;
-    assign last = last_i;
+    //assign valid = tvalid;
+    assign last = tlast;
     
     assign spi_sdo0_o = spi_sdo0;
     assign spi_sdo1_o = spi_sdo1;
@@ -155,8 +152,7 @@ module SPI_load_file(
         reset_i = 1'b0;
         sck_zero = 1'b1;
         //Start to access read buffer
-        RB_start = 1'b0;
-        data_ready = 1'b1;
+        data_ready = 1'b0;
         case (PRES_STATE)
         INIT:begin
             reset_i = 1'b1;
@@ -173,16 +169,17 @@ module SPI_load_file(
                 sck_zero = 1'b1;
             else
                 sck_zero = 1'b0;
-                
+            
+            if(i==8) begin 
+                data_ready = 1'b1;
+            end
             if(L_addr_done) begin 
                 reset_i = 1'b1;
-                RB_start = 1'b1;
             end
         end
         SPI_LOAD_DATA:begin
             sck_zero = 1'b0;
-            RB_start = 1'b1;
-            data_ready = 1'b0;
+            //data_ready = 1'b0;
             if(use_qspi) begin
                 if(i==7) begin
                     reset_i = 1'b1;
@@ -196,6 +193,7 @@ module SPI_load_file(
             end
             if(L_data_done) begin
                 data_ready = 1'b1;
+                //reset_i = 1'b1;
             end
             if(k==spi_addr_idx) begin
                 reset_i = 1'b1;
@@ -213,7 +211,7 @@ module SPI_load_file(
                 sck_zero = 1'b0;
             if(L_addr_done) begin 
                 reset_i = 1'b1;
-                RB_start = 1'b1;
+                data_ready = 1'b1;
             end
         end
         LOAD_DONE:begin
@@ -242,7 +240,7 @@ module SPI_load_file(
             end
         end
         SPI_IDLE:begin
-            if(start_load&&valid_i) begin
+            if(start_load) begin
                 NEXT_STATE = SPI_LOAD_ADDR_0;
             end else begin
                 NEXT_STATE = SPI_IDLE;
@@ -256,7 +254,7 @@ module SPI_load_file(
             end
         end
         SPI_LOAD_DATA:begin
-            if(ap_done && L_data_done) begin
+            if(last_i && L_data_done) begin
                 NEXT_STATE = LOAD_DONE;
             end else if(k==spi_addr_idx) begin
                 NEXT_STATE = RESET_CSN;
@@ -291,6 +289,8 @@ module SPI_load_file(
         L_addr_done <= 1'b0;
         L_data_done <= 1'b0;
         re_access_addr <= 1'b0;
+		//tvalid <= 1'b0;
+		tlast <= 1'b0;
         
         case (PRES_STATE)
         INIT:begin
@@ -316,7 +316,7 @@ module SPI_load_file(
             end
         end
         SPI_IDLE:begin
-            if(start_load&&valid_i) begin
+            if(start_load) begin
                 spi_csn  <= 1'b0;
             end
         end
@@ -423,6 +423,8 @@ module SPI_load_file(
         LOAD_DONE:begin
             spi_csn <= 1'b1;
             fetch_enable <= 1'b1;
+			//tvalid <= valid_i;
+			tlast <= last_i;
         end
         endcase
     end    

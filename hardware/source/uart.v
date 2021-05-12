@@ -45,14 +45,15 @@ module uart (
     
     reg[3:0] PRES_STATE, NEXT_STATE;
     reg[7:0] character;
-    reg start_wait, start_access, update_idx, update_char, next_char, valid, uart_done;
+    reg start_wait, start_access, update_idx, update_char, next_char, uart_done;
+    reg valid_t, valid;
     reg reset_i;
     
     integer i,k;
     
     assign tx = 1'b1;
     assign char = character;
-    assign uart_w_valid = valid;
+    assign uart_w_valid = valid_t;
     assign done = uart_done;
 
     // State Control index
@@ -62,6 +63,7 @@ module uart (
         end else begin
             i<=i+1;
         end
+        valid_t <= valid;
     end
 
         // Control path sequential circuit.
@@ -70,10 +72,6 @@ module uart (
             PRES_STATE <= WAIT_NEG_RX;
         end else begin
             PRES_STATE <= NEXT_STATE;
-            if(gpio) begin
-                PRES_STATE <= DONE;
-            end
-            //$display($time, " Current STATE: %b ", PRES_STATE);
         end
     end
     
@@ -110,7 +108,12 @@ module uart (
     
     // Control path combinational circuit.
     always @(*) begin
-        NEXT_STATE = WAIT_NEG_RX;
+        if(gpio) begin
+            NEXT_STATE = DONE;
+        end else begin
+            NEXT_STATE = WAIT_NEG_RX;
+        end
+        
         case (PRES_STATE)
         WAIT_NEG_RX:begin
             if(start_wait) begin

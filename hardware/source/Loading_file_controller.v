@@ -35,9 +35,10 @@ module Loading_file_controller(
     //SPI
     // Recieve from Read buffer
     input [31:0] spi_data, //tdata_2
-    //input r_valid_i,
-    // Control FSM to DONE state
+    input r_valid_i,
     input r_last_i,
+    // Control FSM to DONE state
+    //input r_done_i,
     // Interconnect to Read_buffer
     output rb_ready,
     //Output to PULP_System_L4
@@ -59,6 +60,7 @@ module Loading_file_controller(
     // Scalar control signals
     input start_spi,
     input[31:0] spi_addr_idx,
+    input[31:0] instr_num,
     input use_qspi,
     
     // Uart signals
@@ -92,8 +94,9 @@ module Loading_file_controller(
     .clk(clk_2),
     .rst_n(rst_n),
     .spi_data(spi_data),
-    //.valid_i(r_valid_i),
+    .valid_i(r_valid_i),
     .last_i(r_last_i),
+    //.r_done_i(r_done_i),
     .spi_sdi0(spi_sdi0),
     .spi_sdi1(spi_sdi1),
     .spi_sdi2(spi_sdi2),
@@ -101,6 +104,7 @@ module Loading_file_controller(
     .start_load(spi_start_load),
     .start_spi(start_spi),
     .spi_addr_idx(spi_addr_idx),
+    .instr_num(instr_num),
     .use_qspi(use_qspi),
     //Output
     //.valid(r_valid_o),

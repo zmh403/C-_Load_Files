@@ -25,10 +25,11 @@ module SPI_load_file(
     input rst_n,
     
     // Recieve from Read buffer
-    input [31:0] spi_data, //tdata_2
-    //input valid_i,
-    // Control FSM to DONE state
+    input [31:0] spi_data,
+    input valid_i,
     input last_i,
+    // Control FSM to DONE state
+    //input r_done_i,
     // Interconnect to Read_buffer
     output rb_ready,
     //Output to PULP_System_L4
@@ -52,6 +53,7 @@ module SPI_load_file(
     // Scalar control signal
     input start_spi,
     input[31:0] spi_addr_idx,
+    input[31:0] instr_num, //total instruction number + 1 (index+2)
     input use_qspi
     );
     
@@ -95,7 +97,7 @@ module SPI_load_file(
     //control Read buffer
     reg RB_start;
     //reg tvalid,
-    reg tlast, data_ready;
+    reg tlast, data_ready, r_done;
     
     
     assign jtag_setup = write_reg_done;
@@ -127,7 +129,10 @@ module SPI_load_file(
             sck = clk;
         end
     end
-    
+    always @(negedge clk) begin
+        tlast <= last_i;
+        //r_done <= r_done_i;
+    end
     // State Control index
     always @(negedge clk) begin
         if(reset_i) begin
@@ -170,31 +175,30 @@ module SPI_load_file(
             else
                 sck_zero = 1'b0;
             
-            if(i==8) begin 
-                data_ready = 1'b1;
-            end
+            //if(i==8) begin 
+            //    data_ready = 1'b1;
+            //end
             if(L_addr_done) begin 
                 reset_i = 1'b1;
             end
         end
         SPI_LOAD_DATA:begin
             sck_zero = 1'b0;
-            //data_ready = 1'b0;
             if(use_qspi) begin
                 if(i==7) begin
                     reset_i = 1'b1;
-                    //data_ready = 1'b1;
+                    data_ready = 1'b1;
                  end
             end else begin
                 if(i==31) begin
                     reset_i = 1'b1;
-                    //data_ready = 1'b1;
+                    data_ready = 1'b1;
                 end
             end
-            if(L_data_done) begin
-                data_ready = 1'b1;
+            //if(L_data_done) begin
+                //data_ready = 1'b1;
                 //reset_i = 1'b1;
-            end
+            //end
             if(k==spi_addr_idx) begin
                 reset_i = 1'b1;
                 data_ready = 1'b0;
@@ -211,10 +215,11 @@ module SPI_load_file(
                 sck_zero = 1'b0;
             if(L_addr_done) begin 
                 reset_i = 1'b1;
-                data_ready = 1'b1;
             end
         end
         LOAD_DONE:begin
+            data_ready = 1'b1;
+            //$display("SPI LOAD DATA DONE !!");
         end
         endcase
     end
@@ -222,7 +227,7 @@ module SPI_load_file(
     // Control path combinational circuit.
     always @(*) begin
         NEXT_STATE = INIT;
-        //$display($time, " Current STATE: %b, INDEX: %d", PRES_STATE, i);
+        //$display($time, " Current STATE: %b", PRES_STATE);
         
         case (PRES_STATE)
         INIT:begin
@@ -240,7 +245,7 @@ module SPI_load_file(
             end
         end
         SPI_IDLE:begin
-            if(start_load) begin
+            if(start_load&&valid_i) begin
                 NEXT_STATE = SPI_LOAD_ADDR_0;
             end else begin
                 NEXT_STATE = SPI_IDLE;
@@ -249,12 +254,13 @@ module SPI_load_file(
         SPI_LOAD_ADDR_0:begin
             if(L_addr_done) begin
                 NEXT_STATE = SPI_LOAD_DATA;
+                //$display($time, " Start load data next cycle.");
             end else begin
                 NEXT_STATE = SPI_LOAD_ADDR_0;
             end
         end
         SPI_LOAD_DATA:begin
-            if(last_i && L_data_done) begin
+            if(k==instr_num) begin
                 NEXT_STATE = LOAD_DONE;
             end else if(k==spi_addr_idx) begin
                 NEXT_STATE = RESET_CSN;
@@ -271,6 +277,7 @@ module SPI_load_file(
         end
         SPI_LOAD_ADDR_1:begin
             if(L_addr_done) begin
+                //$display($time, " Start load data next cycle.");
                 NEXT_STATE = SPI_LOAD_DATA;
             end else begin
                 NEXT_STATE = SPI_LOAD_ADDR_1;
@@ -289,8 +296,6 @@ module SPI_load_file(
         L_addr_done <= 1'b0;
         L_data_done <= 1'b0;
         re_access_addr <= 1'b0;
-		//tvalid <= 1'b0;
-		tlast <= 1'b0;
         
         case (PRES_STATE)
         INIT:begin
@@ -316,7 +321,7 @@ module SPI_load_file(
             end
         end
         SPI_IDLE:begin
-            if(start_load) begin
+            if(start_load&&valid_i) begin
                 spi_csn  <= 1'b0;
             end
         end
@@ -423,8 +428,6 @@ module SPI_load_file(
         LOAD_DONE:begin
             spi_csn <= 1'b1;
             fetch_enable <= 1'b1;
-			//tvalid <= valid_i;
-			tlast <= last_i;
         end
         endcase
     end    
